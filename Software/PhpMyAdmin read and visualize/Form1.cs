@@ -17,10 +17,13 @@ namespace PhpMyAdmin_read_and_visualize
             InitializeComponent();
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void AnalyzeButton_Click(object sender, EventArgs e)
         {
-            const string server = ""; //fill in 
-            const string database = ""
+            string server = ServerTextBox.Text;
+            string database = DatabaseTextBox.Text;
+            string username = UsernameTextBox.Text;
+            string password = PasswordTextBox.Text; 
+
         }
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{46FDC880-78E3-4A8C-9A35-FB3A63DFF5AF}</ProjectGuid>
+    <ProjectGuid>{1B4C633A-D996-4D1D-9370-A8A0012C636F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PhpMyAdmin_read_and_visualize</RootNamespace>
     <AssemblyName>PhpMyAdmin read and visualize</AssemblyName>
