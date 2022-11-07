@@ -1,0 +1,35 @@
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\PhpMyAdmin read and visualize.exe.config
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\PhpMyAdmin read and visualize.exe
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\PhpMyAdmin read and visualize.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\Google.Protobuf.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\MySql.Data.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Buffers.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Memory.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\ZstdNet.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\Google.Protobuf.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\Google.Protobuf.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\MySql.Data.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Buffers.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Memory.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.AssemblyReference.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.SuggestedBindingRedirects.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.Form1.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.Properties.Resources.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.GenerateResource.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.CoreCompileInputs.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.CopyComplete
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.exe
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.Form2.resources

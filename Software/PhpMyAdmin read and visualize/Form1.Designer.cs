@@ -37,11 +37,12 @@
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.SaveLoginCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // AnalyzeButton
             // 
-            this.AnalyzeButton.Location = new System.Drawing.Point(55, 94);
+            this.AnalyzeButton.Location = new System.Drawing.Point(113, 94);
             this.AnalyzeButton.Name = "AnalyzeButton";
             this.AnalyzeButton.Size = new System.Drawing.Size(75, 23);
             this.AnalyzeButton.TabIndex = 0;
@@ -118,11 +119,22 @@
             this.PasswordTextBox.TabIndex = 8;
             this.PasswordTextBox.Text = "04juLi2003";
             // 
+            // SaveLoginCheckBox
+            // 
+            this.SaveLoginCheckBox.AutoSize = true;
+            this.SaveLoginCheckBox.Location = new System.Drawing.Point(12, 97);
+            this.SaveLoginCheckBox.Name = "SaveLoginCheckBox";
+            this.SaveLoginCheckBox.Size = new System.Drawing.Size(93, 20);
+            this.SaveLoginCheckBox.TabIndex = 9;
+            this.SaveLoginCheckBox.Text = "Save login";
+            this.SaveLoginCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(201, 126);
+            this.Controls.Add(this.SaveLoginCheckBox);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.CheckBox SaveLoginCheckBox;
     }
 }
 
