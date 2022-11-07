@@ -38,11 +38,12 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.SaveLoginCheckBox = new System.Windows.Forms.CheckBox();
+            this.ForgetLoginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AnalyzeButton
             // 
-            this.AnalyzeButton.Location = new System.Drawing.Point(113, 94);
+            this.AnalyzeButton.Location = new System.Drawing.Point(114, 95);
             this.AnalyzeButton.Name = "AnalyzeButton";
             this.AnalyzeButton.Size = new System.Drawing.Size(75, 23);
             this.AnalyzeButton.TabIndex = 0;
@@ -56,7 +57,6 @@
             this.ServerTextBox.Name = "ServerTextBox";
             this.ServerTextBox.Size = new System.Drawing.Size(100, 22);
             this.ServerTextBox.TabIndex = 1;
-            this.ServerTextBox.Text = "fill in";
             // 
             // ServerLabel
             // 
@@ -82,7 +82,6 @@
             this.DatabaseTextBox.Name = "DatabaseTextBox";
             this.DatabaseTextBox.Size = new System.Drawing.Size(100, 22);
             this.DatabaseTextBox.TabIndex = 4;
-            this.DatabaseTextBox.Text = "fill in";
             // 
             // UsernameTextBox
             // 
@@ -90,7 +89,6 @@
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(100, 22);
             this.UsernameTextBox.TabIndex = 5;
-            this.UsernameTextBox.Text = "dbi490343";
             // 
             // UsernameLabel
             // 
@@ -117,7 +115,6 @@
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 22);
             this.PasswordTextBox.TabIndex = 8;
-            this.PasswordTextBox.Text = "04juLi2003";
             // 
             // SaveLoginCheckBox
             // 
@@ -129,21 +126,32 @@
             this.SaveLoginCheckBox.Text = "Save login";
             this.SaveLoginCheckBox.UseVisualStyleBackColor = true;
             // 
+            // ForgetLoginButton
+            // 
+            this.ForgetLoginButton.Location = new System.Drawing.Point(12, 123);
+            this.ForgetLoginButton.Name = "ForgetLoginButton";
+            this.ForgetLoginButton.Size = new System.Drawing.Size(100, 25);
+            this.ForgetLoginButton.TabIndex = 10;
+            this.ForgetLoginButton.Text = "Forget login";
+            this.ForgetLoginButton.UseVisualStyleBackColor = true;
+            this.ForgetLoginButton.Click += new System.EventHandler(this.ForgetLoginButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(201, 126);
-            this.Controls.Add(this.SaveLoginCheckBox);
+            this.ClientSize = new System.Drawing.Size(201, 152);
             this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.PasswordLabel);
-            this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.DatabaseTextBox);
+            this.Controls.Add(this.ForgetLoginButton);
+            this.Controls.Add(this.SaveLoginCheckBox);
+            this.Controls.Add(this.PasswordLabel);
+            this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.DatabaseLabel);
             this.Controls.Add(this.ServerLabel);
-            this.Controls.Add(this.ServerTextBox);
             this.Controls.Add(this.AnalyzeButton);
+            this.Controls.Add(this.ServerTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -163,6 +171,7 @@
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.CheckBox SaveLoginCheckBox;
+        private System.Windows.Forms.Button ForgetLoginButton;
     }
 }
 

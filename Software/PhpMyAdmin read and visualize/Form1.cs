@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace PhpMyAdmin_read_and_visualize
@@ -111,6 +112,7 @@ namespace PhpMyAdmin_read_and_visualize
             {
                 Console.WriteLine(expetion.Message);
                 login = false;
+                MessageBox.Show("Due to not being able to verify this login it wont be saved for further launches.\n The previous login data will be used instead.");
             }
 
 
@@ -128,17 +130,29 @@ namespace PhpMyAdmin_read_and_visualize
             }
             else if (!SaveLoginCheckBox.Checked)
             {
-                File.WriteAllText(@"DataFiles/Login/Server.txt", "");
-                File.WriteAllText(@"DataFiles/Login/Database.txt", "");
-                File.WriteAllText(@"DataFiles/Login/Username.txt", "");
-                File.WriteAllText(@"DataFiles/Login/Password.txt", "");
-
                 File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "n");
             }
 
             Form2 DataAnalyzeForm = new Form2();
             DataAnalyzeForm.Show();
 
+        }
+
+        private void ForgetLoginButton_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(@"DataFiles/Login/Server.txt", "");
+            File.WriteAllText(@"DataFiles/Login/Database.txt", "");
+            File.WriteAllText(@"DataFiles/Login/Username.txt", "");
+            File.WriteAllText(@"DataFiles/Login/Password.txt", "");
+
+            File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "n");
+
+            SaveLoginCheckBox.Checked = false;
+
+            ServerTextBox.Text = "";
+            DatabaseTextBox.Text = "";
+            UsernameTextBox.Text = "";
+            PasswordTextBox.Text = "";
         }
     }
 }
