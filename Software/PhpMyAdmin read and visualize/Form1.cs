@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace PhpMyAdmin_read_and_visualize
     {
         string CaesarCipher(string input, bool encrypt)
         {
-            string order = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]',./{}|:<>?~`"; // exlcuding ; / and "
+            string order = "wGho+[iYyZ>?JDU8}<fI&Frqx6Ov,A9a5lnp]2bjM|:z7QC.~`mgK4@^ENu()_WXTt-eV#$%H0/{ck1PL=SB!dRs3*'";  // exlcuding ; / and "  default caesar ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]',./{}|:<>?~`
             string output = "";
             if (encrypt)
             {
@@ -99,21 +100,38 @@ namespace PhpMyAdmin_read_and_visualize
             string username = UsernameTextBox.Text;
             string password = PasswordTextBox.Text;
             string ConString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password;
+
+            bool login = true;
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(ConString);
+                conn.Open();
+            }
+            catch (Exception expetion)
+            {
+                Console.WriteLine(expetion.Message);
+                login = false;
+            }
+
+
             if (SaveLoginCheckBox.Checked)
             {
-                File.WriteAllText(@"DataFiles/Login/Server.txt", CaesarCipher(server, true));
-                File.WriteAllText(@"DataFiles/Login/Database.txt", CaesarCipher(database, true));
-                File.WriteAllText(@"DataFiles/Login/Username.txt", CaesarCipher(username, true));
-                File.WriteAllText(@"DataFiles/Login/Password.txt", CaesarCipher(password, true));
+                if (login)
+                {
+                    File.WriteAllText(@"DataFiles/Login/Server.txt", CaesarCipher(server, true));
+                    File.WriteAllText(@"DataFiles/Login/Database.txt", CaesarCipher(database, true));
+                    File.WriteAllText(@"DataFiles/Login/Username.txt", CaesarCipher(username, true));
+                    File.WriteAllText(@"DataFiles/Login/Password.txt", CaesarCipher(password, true));
+                }
 
                 File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "y");
             }
             else if (!SaveLoginCheckBox.Checked)
             {
-                File.WriteAllText(@"DataFiles/Login/Server.txt", " ");
-                File.WriteAllText(@"DataFiles/Login/Database.txt", " ");
-                File.WriteAllText(@"DataFiles/Login/Username.txt", " ");
-                File.WriteAllText(@"DataFiles/Login/Password.txt", " ");
+                File.WriteAllText(@"DataFiles/Login/Server.txt", "");
+                File.WriteAllText(@"DataFiles/Login/Database.txt", "");
+                File.WriteAllText(@"DataFiles/Login/Username.txt", "");
+                File.WriteAllText(@"DataFiles/Login/Password.txt", "");
 
                 File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "n");
             }
