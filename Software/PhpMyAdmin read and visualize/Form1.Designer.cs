@@ -43,7 +43,7 @@
             // 
             // AnalyzeButton
             // 
-            this.AnalyzeButton.Location = new System.Drawing.Point(114, 95);
+            this.AnalyzeButton.Location = new System.Drawing.Point(97, 124);
             this.AnalyzeButton.Name = "AnalyzeButton";
             this.AnalyzeButton.Size = new System.Drawing.Size(75, 23);
             this.AnalyzeButton.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             // ServerTextBox
             // 
-            this.ServerTextBox.Location = new System.Drawing.Point(88, 9);
+            this.ServerTextBox.Location = new System.Drawing.Point(88, 12);
             this.ServerTextBox.Name = "ServerTextBox";
             this.ServerTextBox.Size = new System.Drawing.Size(100, 22);
             this.ServerTextBox.TabIndex = 1;
@@ -61,7 +61,7 @@
             // ServerLabel
             // 
             this.ServerLabel.AutoSize = true;
-            this.ServerLabel.Location = new System.Drawing.Point(12, 9);
+            this.ServerLabel.Location = new System.Drawing.Point(12, 12);
             this.ServerLabel.Name = "ServerLabel";
             this.ServerLabel.Size = new System.Drawing.Size(47, 16);
             this.ServerLabel.TabIndex = 2;
@@ -70,7 +70,7 @@
             // DatabaseLabel
             // 
             this.DatabaseLabel.AutoSize = true;
-            this.DatabaseLabel.Location = new System.Drawing.Point(12, 31);
+            this.DatabaseLabel.Location = new System.Drawing.Point(12, 43);
             this.DatabaseLabel.Name = "DatabaseLabel";
             this.DatabaseLabel.Size = new System.Drawing.Size(67, 16);
             this.DatabaseLabel.TabIndex = 3;
@@ -78,14 +78,14 @@
             // 
             // DatabaseTextBox
             // 
-            this.DatabaseTextBox.Location = new System.Drawing.Point(88, 28);
+            this.DatabaseTextBox.Location = new System.Drawing.Point(88, 40);
             this.DatabaseTextBox.Name = "DatabaseTextBox";
             this.DatabaseTextBox.Size = new System.Drawing.Size(100, 22);
             this.DatabaseTextBox.TabIndex = 4;
             // 
             // UsernameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(88, 47);
+            this.UsernameTextBox.Location = new System.Drawing.Point(88, 68);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(100, 22);
             this.UsernameTextBox.TabIndex = 5;
@@ -93,7 +93,7 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(12, 50);
+            this.UsernameLabel.Location = new System.Drawing.Point(12, 71);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(70, 16);
             this.UsernameLabel.TabIndex = 6;
@@ -102,7 +102,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(12, 69);
+            this.PasswordLabel.Location = new System.Drawing.Point(12, 99);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(67, 16);
             this.PasswordLabel.TabIndex = 7;
@@ -110,7 +110,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(88, 66);
+            this.PasswordTextBox.Location = new System.Drawing.Point(88, 96);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 22);
@@ -119,7 +119,7 @@
             // SaveLoginCheckBox
             // 
             this.SaveLoginCheckBox.AutoSize = true;
-            this.SaveLoginCheckBox.Location = new System.Drawing.Point(12, 97);
+            this.SaveLoginCheckBox.Location = new System.Drawing.Point(212, 14);
             this.SaveLoginCheckBox.Name = "SaveLoginCheckBox";
             this.SaveLoginCheckBox.Size = new System.Drawing.Size(93, 20);
             this.SaveLoginCheckBox.TabIndex = 9;
@@ -128,7 +128,7 @@
             // 
             // ForgetLoginButton
             // 
-            this.ForgetLoginButton.Location = new System.Drawing.Point(12, 123);
+            this.ForgetLoginButton.Location = new System.Drawing.Point(212, 39);
             this.ForgetLoginButton.Name = "ForgetLoginButton";
             this.ForgetLoginButton.Size = new System.Drawing.Size(100, 25);
             this.ForgetLoginButton.TabIndex = 10;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(201, 152);
+            this.ClientSize = new System.Drawing.Size(324, 161);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.DatabaseTextBox);
