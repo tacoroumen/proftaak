@@ -15,6 +15,16 @@ namespace PhpMyAdmin_read_and_visualize
         public Form2()
         {
             InitializeComponent();
+
+            using (Form2 form2 = new Form2())
+            {
+                if (form2.ShowDialog() == DialogResult.OK)
+                {
+                    someControlOnForm1.Text = form2.TheValue;
+                }
+            }
         }
+
+        
     }
 }

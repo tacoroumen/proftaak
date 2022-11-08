@@ -94,19 +94,31 @@ namespace PhpMyAdmin_read_and_visualize
 
         }
 
+        string[] ConString = { "", "", "" };
+
+        public string[] TheValue
+        {
+            get { return ConString; }
+        }
+        
         private void AnalyzeButton_Click(object sender, EventArgs e)
         {
             string server = ServerTextBox.Text;
             string database = DatabaseTextBox.Text;
             string username = UsernameTextBox.Text;
             string password = PasswordTextBox.Text;
-            string ConString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password;
+            ConString[0] = "SERVER=" + server + ";" + "DATABASE=";
+            ConString[1] = database;
+            ConString[2] = ";" + "UID=" + username + ";" + "PASSWORD=" + password;
 
-            bool login = true;
+
+
+        bool login = true;
             try
             {
-                MySqlConnection conn = new MySqlConnection(ConString);
+                MySqlConnection conn = new MySqlConnection(ConString[0] + ConString[1] + ConString[2]);
                 conn.Open();
+                conn.Close();
             }
             catch (Exception expetion)
             {
@@ -132,10 +144,6 @@ namespace PhpMyAdmin_read_and_visualize
             {
                 File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "n");
             }
-
-            Form2 DataAnalyzeForm = new Form2();
-            DataAnalyzeForm.Show();
-
         }
 
         private void ForgetLoginButton_Click(object sender, EventArgs e)
