@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--For styles go to this file \/-->
 <link rel="stylesheet" href="styles.css">
 
 <head>
+    <!--Title of web page and other stuff-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Het recycle project</title>
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+    <!--Makes it so the favicon image appears-->    
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/image.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/image.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/image.png">
+    <link rel="manifest" href="/img/image.png">
+    <link rel="mask-icon" href="/img/image.png" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <!--Makes it so the font works-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+
+    <!--Makes the 3 lines and close image appear-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <header> 
-    <div class="logo">
-        <a href="/index.html"> <img id = "logo" src="/android-chrome-192x192.png" alt="FirstXL_LOGO" width="50"length="50"> </a>
-    </div>
-    <div class="nav">
-        <ul class="nav_links">
-            <li> <a href=""> PlAcEhOlDeR </a> </li> 
-            <li> <a href=""> PlAcEhOlDeR </a> </li>
-            <li> <a href=""> PlAcEhOlDeR </a> </li>
-        </ul>
-    </div>
-    <div class="login">
-        <li> <a href=""> PlAcEhOlDeR </a> </li> 
-    </div>
+
 </header>
+
+<body>
+    <section class="header">
+        <nav>
+            <!--Add the image and buttons on top-->
+            <a href="/index.html"> <img src="/img/image.png" > </a>
+            <div class="nav-links" id="navLinks">
+                <!--Onclick function-->
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                <ul>
+                    <li> <a href=""> HOME </a> </li> 
+                    <li> <a href=""> SUPERMARKT </a> </li>
+                    <li> <a href=""> MILIEUSTRAAT </a> </li>
+                    <li> <a href=""> OVER ONS </a> </li>
+                </ul>
+            </div>
+            <!--Onlclick other funtion-->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Let's Recycle Together</h1>
+            <p>Ons doel is om zoveel mogelijk mensen samen hun plastic te laten bewaren en <br> op een verantwoordelijke manier in te laten leveren!</p>
+            <div class="shield">
+                <a href="/yes.html"> <i class="fa fa-shield" > </i> </a>
+            </div>
+        </div>
+
+
+    </section>
+
+<!--JavaScript for toggle menu-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
