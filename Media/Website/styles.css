@@ -13,13 +13,10 @@
   position: relative;
 }
 
-/*SO IT DOESNT VIBRATE*/
-
-
 nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
 }
 nav img {
   width: 100px;
@@ -71,18 +68,28 @@ nav img {
 .shield {
   color: white;
 }
+
+
 nav .fa{
   display: none;
 }
 
 
-
 @media(max-width: 700px) {
   .text-box h1{
-    font-size: 20px;
+    font-size: 35px;
   }
   .nav-links ul li {
     display: block;
+  } 
+  #supermarkt h1{
+    font-size: 35px;
+  }
+  #milieustraat h1{
+    font-size: 35px;
+  }
+  #invloed h1{
+    font-size: 35px;
   }
   .nav-links{
     position: absolute;
@@ -90,10 +97,13 @@ nav .fa{
     height: 100vh;
     width: 200px;
     top: 0;
-    right: -200px;
+    right: 0px;
     text-align: left;
     z-index: 2;
     transition: 1s;
+  }
+  .hidden{
+    overflow: hidden;
   }
   nav .fa{
     display: block;
@@ -110,4 +120,110 @@ nav .fa{
     text-decoration: none;
     font-size: 20px;
   }
+}
+
+
+
+/*-For the 2nd section, supermarkt-*/
+.supermarkt {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 130px;
+
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/supermarkt-keten-aanvoer-molenaar_2021-09-08-133314.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.supermarkt h1{
+  font-size: 62px;
+  font-weight: 600;
+  color: white;
+}
+.supermarkt p{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/*-For the 3rd section, milieustraat-*/
+.milieustraat {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 90px;
+
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/Elkor-Saver-Roosendaal_5261498.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.milieustraat h1{
+  font-size: 62px;
+  font-weight: 600;
+  color: white;
+}
+.milieustraat p{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/*-For the 4th section, invloed-*/
+.invloed {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 90px;
+
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/Elkor-Saver-Roosendaal_5261498.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.invloed h1{
+  font-size: 62px;
+  font-weight: 600;
+  color: white;
+}
+.invloed p{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+
+
+#navbar {
+  backdrop-filter: blur(10px);
+  position: fixed; /* Make it stick/fixed */
+  top: -50px; /* Hide the navbar 50 px outside of the top view */
+  height: 30px;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 10px;
+}
+#navbar {
+  z-index: 10000;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }

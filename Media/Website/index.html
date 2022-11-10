@@ -33,17 +33,27 @@
 </header>
 
 <body>
+
+    <div id="navbar">
+        <a href="#home">HOME</a>
+        <a href="#supermarkt">SUPERMARKT</a>
+        <a href="#milieustraat">MILIEUSTRAAT</a>
+        <a href="#invloed"> INVLOED </a>
+        <a href=""> OVER ONS</a>
+    </div>
+
     <section class="header">
         <nav>
             <!--Add the image and buttons on top-->
-            <a href="/index.html"> <img src="/img/image.png" > </a>
+            <a href="/index.html"> <img src="/img/image.png" id="home"> </a>
             <div class="nav-links" id="navLinks">
                 <!--Onclick function-->
                 <i class="fa fa-times-circle" onclick="hideMenu()"></i>
                 <ul>
-                    <li> <a href=""> HOME </a> </li> 
-                    <li> <a href=""> SUPERMARKT </a> </li>
-                    <li> <a href=""> MILIEUSTRAAT </a> </li>
+                    <li> <a href="#home"> HOME </a> </li> 
+                    <li> <a href="#supermarkt"> SUPERMARKT </a> </li>
+                    <li> <a href="#milieustraat"> MILIEUSTRAAT </a> </li>
+                    <li> <a href="#invloed"> INVLOED</a> </li>
                     <li> <a href=""> OVER ONS </a> </li>
                 </ul>
             </div>
@@ -53,22 +63,47 @@
         <div class="text-box">
             <h1>Let's Recycle Together</h1>
             <p>Ons doel is om zoveel mogelijk mensen samen hun plastic te laten bewaren en <br> op een verantwoordelijke manier in te laten leveren!</p>
-            <div class="shield">
-                <a href="/yes.html"> <i class="fa fa-shield" > </i> </a>
-            </div>
         </div>
+    </section>
 
+    <section class="supermarkt">
+        <a id="supermarkt"> <h1>Ons systeem in de supermarkt</h1> </a>
+        <p>Placeholder</p>
+    </section>
 
+    <section class="milieustraat">
+        <a id="milieustraat"> <h1>Milieustraat</h1> </a>
+        <p>Placeholder</p>
+    </section>
+
+    <section class="invloed">
+        <a id="invloed"> <h1>Invloeden op het milieu</h1> </a>
+        <p>Placeholder</p>
     </section>
 
 <!--JavaScript for toggle menu-->
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
-</script>
+    <script>
+const showMenu = () => {
+    document.getElementById("navLinks").style.width = "250px";
+    document.getElementById("navLinks").style.marginLeft = "250px";
+    navLinks.classList.remove("hidden");
+};
+
+const hideMenu = () => {
+    document.getElementById("navLinks").style.width = "0";
+    document.getElementById("navLinks").style.marginLeft = "0";
+    navLinks.classList.add("hidden");
+};
+
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+            } 
+            else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
+    </script>
 </body>
