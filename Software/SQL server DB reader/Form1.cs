@@ -19,6 +19,22 @@ namespace SQL_server_DB_reader
 {
     public partial class Form1 : Form
     {
+        public Form1()
+        {
+            InitializeComponent();
+
+            ServerTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Server.txt"), false);
+            DatabaseTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Database.txt"), false);
+            UsernameTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Username.txt"), false);
+            PasswordTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Password.txt"), false);
+
+            if (File.ReadAllText(@"DataFiles/login/SaveLogin.txt") == "y")
+            {
+                SaveLoginCheckBox.Checked = true;
+            }
+
+        }
+
         public string CaesarCipher(string input, bool encrypt)
         {
             string order = "wGho+[iYyZ>?JDU8}<fI&Frqx6Ov,A9a5lnp]2bjM|:z7QC.~`mgK4@^ENu()_WXTt-eV#$%H0/{ck1PL=SB!dRs3*'";  // exlcuding ; / and "  default caesar ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]',./{}|:<>?~`
@@ -80,23 +96,7 @@ namespace SQL_server_DB_reader
             return output;
         }
 
-        public Form1()
-        {
-            InitializeComponent();
-
-            ServerTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Server.txt"), false);
-            DatabaseTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Database.txt"), false);
-            UsernameTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Username.txt"), false);
-            PasswordTextBox.Text = CaesarCipher(File.ReadAllText(@"DataFiles/Login/Password.txt"), false);
-
-            if (File.ReadAllText(@"DataFiles/login/SaveLogin.txt") == "y")
-            {
-                SaveLoginCheckBox.Checked = true;
-            }
-
-        }
-
-        string[] ConString = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        string[] ConString = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }; 
         private void AnalyzeButton_Click(object sender, EventArgs e)
         {
             string server = ServerTextBox.Text;
@@ -111,7 +111,7 @@ namespace SQL_server_DB_reader
             else
             {
                 SecuInfo = "False";
-            } 
+            }
             //Data Source=:memory:;Initial Catalog=maindb;Persist Security Info=True;User ID=SA;Password=***********
             ConString[0] = "Data Source=";
             ConString[1] = server;
@@ -137,6 +137,7 @@ namespace SQL_server_DB_reader
                 conn.Open();
                 conn.Close();
                 MessageBox.Show("Connected WOOOWOOO!!!!!");
+                Form2 form2 = new Form2(ConString);
             }
             catch (Exception expetion)
             {
