@@ -1,34 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--For styles go to this file \/-->
 <link rel="stylesheet" href="styles.css">
 
 <head>
+    <!--Title of web page and other stuff-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Het recycle project</title>
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+    <!--Makes it so the favicon image appears-->    
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/image.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/image.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/image.png">
+    <link rel="manifest" href="/img/image.png">
+    <link rel="mask-icon" href="/img/image.png" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <!--Makes it so the font works-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+
+    <!--Makes the 3 lines and close image appear-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <header> 
-    <div class="logo">
-        <a href="/index.html"> <img id = "logo" src="/android-chrome-192x192.png" alt="FirstXL_LOGO" width="50"length="50"> </a>
-    </div>
-    <div class="nav">
-        <ul class="nav_links">
-            <li> <a href=""> PlAcEhOlDeR </a> </li> 
-            <li> <a href=""> PlAcEhOlDeR </a> </li>
-            <li> <a href=""> PlAcEhOlDeR </a> </li>
-        </ul>
-    </div>
-    <div class="login">
-        <li> <a href=""> PlAcEhOlDeR </a> </li> 
-    </div>
+
 </header>
+
+<body>
+
+    <div id="navbar">
+        <a href="#home">HOME</a>
+        <a href="#supermarkt">SUPERMARKT</a>
+        <a href="#milieustraat">MILIEUSTRAAT</a>
+        <a href="#invloed"> INVLOED </a>
+        <a href=""> OVER ONS</a>
+    </div>
+
+    <section class="header">
+        <nav>
+            <!--Add the image and buttons on top-->
+            <a href="/index.html"> <img src="/img/image.png" id="home"> </a>
+            <div class="nav-links" id="navLinks">
+                <!--Onclick function-->
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                <ul>
+                    <li> <a href="#home"> HOME </a> </li> 
+                    <li> <a href="#supermarkt"> SUPERMARKT </a> </li>
+                    <li> <a href="#milieustraat"> MILIEUSTRAAT </a> </li>
+                    <li> <a href="#invloed"> INVLOED</a> </li>
+                    <li> <a href=""> OVER ONS </a> </li>
+                </ul>
+            </div>
+            <!--Onlclick other funtion-->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Let's Recycle Together</h1>
+            <p>Ons doel is om zoveel mogelijk mensen samen hun plastic te laten bewaren en <br> op een verantwoordelijke manier in te laten leveren!</p>
+        </div>
+    </section>
+
+    <section class="supermarkt">
+        <a id="supermarkt"> <h1>Ons systeem in de supermarkt</h1> </a>
+        <p>Placeholder</p>
+    </section>
+
+    <section class="milieustraat">
+        <a id="milieustraat"> <h1>Milieustraat</h1> </a>
+        <p>Placeholder</p>
+    </section>
+
+    <section class="invloed">
+        <a id="invloed"> <h1>Invloeden op het milieu</h1> </a>
+        <p>Placeholder</p>
+    </section>
+
+<!--JavaScript for toggle menu-->
+    <script>
+const showMenu = () => {
+    document.getElementById("navLinks").style.width = "250px";
+    document.getElementById("navLinks").style.marginLeft = "250px";
+    navLinks.classList.remove("hidden");
+};
+
+const hideMenu = () => {
+    document.getElementById("navLinks").style.width = "0";
+    document.getElementById("navLinks").style.marginLeft = "0";
+    navLinks.classList.add("hidden");
+};
+
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+            } 
+            else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
+    </script>
+</body>
