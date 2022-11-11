@@ -65,6 +65,12 @@ nav img {
   margin: 10px 0 40px;
   font-size: 14px;
 }
+.text-box p2{
+  margin: 10px 0 40px;
+  font-size: 30px;
+  font-weight: 1;
+}
+
 .shield {
   color: white;
 }
@@ -122,7 +128,10 @@ nav .fa{
   }
 }
 
-
+.break {
+  background-color: #000000; 
+  min-height: 1vh;
+}
 
 /*-For the 2nd section, supermarkt-*/
 .supermarkt {
@@ -131,7 +140,7 @@ nav .fa{
   text-align: center;
   padding-top: 130px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/supermarkt-keten-aanvoer-molenaar_2021-09-08-133314.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/1624848.jpg);
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -144,6 +153,25 @@ nav .fa{
   color: white;
 }
 .supermarkt p{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+  
+}
+.supermarkt h2{
+  font-size: 25px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.supermarkt p1{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.supermarkt p2{
   font-size: 14px;
   color: white;
   line-height: 22px;
@@ -175,6 +203,24 @@ nav .fa{
   line-height: 22px;
   padding: 10px;
 }
+.milieustraat h2{
+  font-size: 25px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.milieustraat p1{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.milieustraat p2{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
 
 /*-For the 4th section, invloed-*/
 .invloed {
@@ -183,7 +229,7 @@ nav .fa{
   text-align: center;
   padding-top: 90px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/Elkor-Saver-Roosendaal_5261498.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/Recycling-Graphic.png);
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -204,7 +250,7 @@ nav .fa{
 
 
 #navbar {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
   position: fixed; /* Make it stick/fixed */
   top: -50px; /* Hide the navbar 50 px outside of the top view */
   height: 30px;
