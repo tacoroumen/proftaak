@@ -25,11 +25,12 @@ C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and 
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.AssemblyReference.cache
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.SuggestedBindingRedirects.cache
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.Form1.resources
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.Properties.Resources.resources
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.GenerateResource.cache
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.CoreCompileInputs.cache
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.csproj.CopyComplete
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.exe
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin read and visualize.pdb
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.Form2.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.Login.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.DataVisualizer.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\PhpMyAdmin read and visualize\obj\Debug\PhpMyAdmin_read_and_visualize.NotSavedNotification.resources
