@@ -4,10 +4,10 @@
 
 char ssid[] = SECRET_SSID;
 char pass[] = SECRET_PASS;
+
 const int LEDARRAY[6] = {5,6,7,8,12,13};
 const int INTERVALINFO = 5000;    // interval at which to update the board information
-int status = WL_IDLE_STATUS;             // the Wi-Fi radio's status
-int ledstate = LOW;                       //ledState used to set the LED
+int status = WL_IDLE_STATUS;             // the Wi-Fi radio status
 int i = 0;
 unsigned long previousMillisInfo = 0;     //will store last time Wi-Fi information was updated
 unsigned long previousMillisLED = 0;      // will store the last time LED was updated
@@ -28,15 +28,8 @@ void setup() {
   Serial.println("---------------------------------------");
 }
 
-void loop() {
+void googleping(){
 
-  String fv = WiFi.firmwareVersion();
-
-  if (fv < WIFI_FIRMWARE_LATEST_VERSION) {
-
-    Serial.println("Please upgrade the firmware");
-
-  }
   Serial.print("Pinging ");
 
   Serial.print(hostName);
@@ -60,8 +53,13 @@ void loop() {
     Serial.println(pingResult);
 
   }
+  delay(5000);
+}
 
-  delay(1000);
+void loop() {
+  
+  googleping();
+
   unsigned long currentMillisInfo = millis();
   if (currentMillisInfo - previousMillisInfo >= INTERVALINFO) {
     previousMillisInfo = currentMillisInfo;
@@ -96,12 +94,6 @@ void loop() {
       delay(250);
       digitalWrite(LEDARRAY[i], LOW);
       delay(250);
-      if (ledstate == LOW) {
-        ledstate = HIGH;
-      } else {
-        ledstate = LOW;
-        digitalWrite(LEDARRAY[i], ledstate);
-      }
     }
   }   
 }
