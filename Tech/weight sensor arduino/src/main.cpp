@@ -37,9 +37,14 @@ void calibrate() {
   Serial.println("Calibration start");
   for(unsigned long time_now; millis() < (millis()+ 100); time_now = millis()){
     Serial.println("Loading... ");
-    int random_int = random(1, 18);
+    int random_int = random_int + random(1, 18);
+    if (random_int >=100){
+      random_int = 100;
+      return;
+    }
     Serial.print(random_int);
     Serial.print("%");
+    
   }
   LoadCell.refreshDataSet(); //refresh the dataset to be sure that the known mass is measured correct
   float newCalibrationValue = 459.36;
