@@ -44,7 +44,6 @@ void calibrate() {
     }
     Serial.print(random_int);
     Serial.print("%");
-    
   }
   LoadCell.refreshDataSet(); //refresh the dataset to be sure that the known mass is measured correct
   float newCalibrationValue = 459.36;
