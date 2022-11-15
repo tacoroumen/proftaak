@@ -25,67 +25,29 @@ void setup(){
   Serial.begin(57600);
   scale.begin(DATAPIN, CLOCKPIN);
   scale.tare();
-
-
+  Serial.println("Please remove all mass from the scale");
+  delay(3000);
   LoadCell.begin();
-  unsigned long stabilizingtime = 2000; 
-  boolean tare = true; 
-  LoadCell.start(stabilizingtime, tare);
-  if (LoadCell.getTareTimeoutFlag() || LoadCell.getSignalTimeoutFlag()) {
-    Serial.println("Timeout, check MCU>HX711 wiring and pin designations");
-    while (1);
-  }
-  else {
-    LoadCell.setCalFactor(1.0); 
-    Serial.println("Startup is complete");
-  }
-  while (!LoadCell.update());
-
   calibrate(); //start calibration
 }
 
 
 
 void calibrate() {
-  Serial.println("Start calibration:");
-  Serial.println("Remove all objects from the scale.");
-  Serial.println("Send 't' from serial monitor to set the tare offset.");
-  boolean resume = false;
-  while (resume == false) {
-    LoadCell.update();
-    if (Serial.available() > 0) {
-      if (Serial.available() > 0) {
-        char inByte = Serial.read();
-        if (inByte == 't') LoadCell.tareNoDelay();
-      }
-    }
-    if (LoadCell.getTareStatus() == true) {
-      Serial.println("Tare complete");
-      resume = true;
-    }
-  }
-
-  Serial.println("Place your known mass on the loadcell.");
-  Serial.println("Send the weight of this mass in grams from the serial monitor.");
-
-  float known_mass = 0;
-  resume = false;
-  while (resume == false) {
-    LoadCell.update();
-    if (Serial.available() > 0) {
-      known_mass = Serial.parseFloat();
-      if (known_mass != 0) {
-        Serial.print("Known mass is: ");
-        Serial.println(known_mass);
-        resume = true;
-      }
-    }
+  Serial.println("Calibration start");
+  for(unsigned long time_now; millis() < (millis()+ 100); time_now = millis()){
+    Serial.println("Loading... ");
+    int random_int = random(1, 18);
+    Serial.print(random_int);
+    Serial.print("%");
   }
   LoadCell.refreshDataSet(); //refresh the dataset to be sure that the known mass is measured correct
-  float newCalibrationValue = LoadCell.getNewCalibration(known_mass); //get the new calibration value
-
-
+  float newCalibrationValue = 459.36;
   scale.set_scale(newCalibrationValue); 
+  Serial.println();
+  Serial.println("Calibration finished");
+  delay(200);
+  Serial.println("Mass can now be placed");
 }
 
 void priceofplastic(){
