@@ -86,7 +86,7 @@ void serialread(){
 
   if (Serial.available() > 0){
     char received = Serial.read();
-    if (received == '\n'){
+    while (received != '\n'){
       if (value == "yes"){
         Serial.println("yes");
         value = "";
@@ -95,8 +95,8 @@ void serialread(){
         Serial.println("no");
         value = "";
       }
-    }else {
-      value += received; 
+    value += received; 
+    received = Serial.read();
     }
   } 
 }
