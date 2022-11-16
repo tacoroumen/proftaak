@@ -4,7 +4,6 @@
 HX711 scale;
 const int CLOCKPIN = 4;
 const int DATAPIN = 5; 
-int i = 0;
 double weight = 0;
 double total_weight = 0;
 double price = 0;
