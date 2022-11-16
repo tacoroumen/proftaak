@@ -36,6 +36,7 @@ float total_price = 0;
 String value;
 
 void calibrate() {
+  LoadCell.tare();
   Serial.println("Calibration start");
   LoadCell.refreshDataSet(); //refresh the dataset to be sure that the known mass is measured correct
   float newCalibrationValue = 459.36;
