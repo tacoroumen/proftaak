@@ -7,7 +7,7 @@
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/Recycling-Graphic.png);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/Recycling-Graphic.png);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -140,7 +140,7 @@ nav .fa{
   text-align: center;
   padding-top: 130px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/1624848.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/1624848.jpg);
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -177,6 +177,17 @@ nav .fa{
   line-height: 22px;
   padding: 10px;
 }
+.supermarkt h3 {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 12px;
+  font-size: 20px;
+  background: transparent;
+  width: 30%;
+  align-items: center;
+}
 
 /*-For the 3rd section, milieustraat-*/
 .milieustraat {
@@ -185,7 +196,7 @@ nav .fa{
   text-align: center;
   padding-top: 90px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/Elkor-Saver-Roosendaal_5261498.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/Elkor-Saver-Roosendaal_5261498.jpg);
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -221,6 +232,17 @@ nav .fa{
   line-height: 22px;
   padding: 10px;
 }
+.milieustraat h3 {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 12px;
+  font-size: 20px;
+  background: transparent;
+  width: 30%;
+  align-items: center;
+}
 
 /*-For the 4th section, invloed-*/
 .invloed {
@@ -229,7 +251,7 @@ nav .fa{
   text-align: center;
   padding-top: 90px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/img/Recycling-Graphic.png);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/dead\ animal.jpg);
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -241,23 +263,83 @@ nav .fa{
   font-weight: 600;
   color: white;
 }
+.invloed p1{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
 .invloed p{
   font-size: 14px;
   color: white;
   line-height: 22px;
   padding: 10px;
 }
-
-
-#navbar {
-  backdrop-filter: blur(0px);
-  position: fixed; /* Make it stick/fixed */
-  top: -50px; /* Hide the navbar 50 px outside of the top view */
-  height: 30px;
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+.invloed h2{
+  font-size: 25px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.invloed p2{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.invloed h3 {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 12px;
+  font-size: 20px;
+  background: transparent;
+  width: 30%;
+  align-items: center;
 }
 
-/* Style the navbar links */
+/*-For the 5th section, overons-*/
+.overons {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 90px;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/people\ working.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.overons h1{
+  font-size: 62px;
+  font-weight: 600;
+  color: white;
+}
+.overons h2{
+  font-size: 25px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+.overons p1{
+  font-size: 14px;
+  color: white;
+  line-height: 22px;
+  padding: 10px;
+}
+
+#navbar {
+  backdrop-filter: blur(0px); /*-- Adds a background blur to the navbar, set to 0 because i didnt
+  like the blur but wanted to remember it existed --*/
+  position: fixed; /*-- Makes it stay in the same place, even with scroll --*/
+  height: 30px; /*-- Changes the height of the blur or background, not used in this case --*/
+  transition: top 0.3s; /*-- Adds the "animation" --*/
+  z-index: 10000; /*-- Makes it so the navbar always appears on top --*/
+  width: 100%; /*-- Makes it so the background fills the entire width of the page --*/
+}
+/*-- Add styles to the navbar, like color and font size --*/
 #navbar a {
   float: left;
   display: block;
@@ -267,9 +349,41 @@ nav .fa{
   text-decoration: none;
   font-size: 10px;
 }
-#navbar {
-  z-index: 10000;
-  position: fixed;
-  top: 0px;
-  width: 100%;
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 100000; /* Make sure it does not overlap */
+  border: 2px solid white; /* Remove borders */
+  background-color: transparent; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 100000px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  backdrop-filter: blur(100px); /* Add a blur on */
+  border: 3px solid white;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+.footer .fa{
+  color: white;
+  margin: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.footer .fa:hover {
+  color: gray;
 }
