@@ -38,7 +38,7 @@ void serialreadmeasure(){
         Serial.print('\n');
         Serial.print("The total weight of the measured objects is: ");
         Serial.print(total_weight / 1000);
-        Serial.print(" kilogramme");
+        Serial.print(" kilograms");
         //print receipt for customer
       }
       message = ""; 
