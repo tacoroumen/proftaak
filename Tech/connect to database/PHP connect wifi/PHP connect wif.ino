@@ -12,7 +12,7 @@ const int LEDARRAY[6] = {5,6,7,8,12,13};
 int status = WL_IDLE_STATUS;  
 int pingResult; 
 int i = 0;
-unsigned long previousMillisInfo = 0;     //will store last time Wi-Fi information was updated
+unsigned long previousMillisInfo = 0; 
 unsigned long previousMillisLED = 0;    
 String data;
 WiFiSSLClient client;
@@ -56,7 +56,6 @@ void setup() {
     delay(5000);
   }
   Serial.println("Connection successful");
-  Serial.println("---------------------------------------");
   if (client.connect(SERVER, 443)) {
     Serial.println("connected to server");
     // Make a HTTP request:
