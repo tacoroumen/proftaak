@@ -96,7 +96,7 @@ namespace SQL_server_DB_reader
             return output;
         }
 
-        string[] ConString = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }; 
+        string[] ConString = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
         private void AnalyzeButton_Click(object sender, EventArgs e)
         {
             string server = ServerTextBox.Text;
@@ -136,18 +136,21 @@ namespace SQL_server_DB_reader
             {
                 conn.Open();
                 conn.Close();
-                MessageBox.Show("Connected WOOOWOOO!!!!!");
-                Form2 form2 = new Form2(ConString);
             }
-            catch (Exception expetion)
+            catch (Exception ex)
             {
-                Console.WriteLine(expetion.Message);
                 login = false;
-                MessageBox.Show("Couldn't verify login, Not saving ");
+                MessageBox.Show("Couldn't verify login, Not saving.\nError message:\n" + ex.Message);
             }
             finally
             {
                 conn.Close();
+            }
+
+            
+            if (login) {
+                Form2 form2 = new Form2(ConString);
+                form2.ShowDialog();
             }
 
             if (SaveLoginCheckBox.Checked)
@@ -183,6 +186,16 @@ namespace SQL_server_DB_reader
             PasswordTextBox.Text = "";
 
             SaveLoginCheckBox.Checked = false;
+        }
+
+        private void DisclaimerButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+                "1. Application only works on MS SQL servers. \n" +
+                "2. Most likely needs a port. \n" +
+                "3. You can change the DB later but its needed for a connection.\n" +
+                "4. All inputs are encrypted but not well so be carefull when sharing ur files.", 
+                "Disclaimers and Info");
         }
     }
 }
