@@ -25,7 +25,7 @@ void setup(){
 void serialreadmeasure(){
   if (Serial.available() > 0) {
     char received = Serial.read();
-
+    
     if (received == '\n') {
       if (message == "yes"){
         Serial.println("Please put the object you want to measure on the scale");
@@ -41,7 +41,7 @@ void serialreadmeasure(){
         Serial.print(" kilogramme");
         //print receipt for customer
       }
-    message = ""; 
+      message = ""; 
     }else {
       message += received;
     }
@@ -75,7 +75,6 @@ void priceofplastic(){
   Serial.println('\n');
 }
 
-
 void measurements(){
   weight = scale.get_units(10);
   total_weight = total_weight + weight;  
@@ -101,7 +100,6 @@ void measurements(){
   Serial.print('\n');
 }
 
-
 void loop(){
   weight = scale.get_units(10);      
   if (weight > 1){
@@ -109,5 +107,4 @@ void loop(){
   }else {
     serialreadmeasure(); //read user input if they want to continue measuring
   }
-
 }
