@@ -9,3 +9,29 @@ C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.CoreCompileInputs.cache
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.exe
 C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.pdb
+<<<<<<< Updated upstream
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\bin\Debug\SQL server DB reader.exe.config
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\bin\Debug\SQL server DB reader.exe
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\bin\Debug\SQL server DB reader.pdb
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.AssemblyReference.cache
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Form1.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Properties.Resources.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.GenerateResource.cache
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.CoreCompileInputs.cache
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.exe
+C:\Users\tacor\Documents\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.pdb
+=======
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Form2.resources
+>>>>>>> Stashed changes
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\bin\Debug\SQL server DB reader.exe.config
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\bin\Debug\SQL server DB reader.exe
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\bin\Debug\SQL server DB reader.pdb
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.AssemblyReference.cache
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.SuggestedBindingRedirects.cache
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Form1.resources
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Form2.resources
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Properties.Resources.resources
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.GenerateResource.cache
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.CoreCompileInputs.cache
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.exe
+C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.pdb

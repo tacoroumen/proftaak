@@ -39,6 +39,7 @@
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.SaveLoginCheckBox = new System.Windows.Forms.CheckBox();
             this.ForgetLoginButton = new System.Windows.Forms.Button();
+            this.DisclaimerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AnalyzeButton
@@ -66,7 +67,7 @@
             this.ServerLabel.Location = new System.Drawing.Point(9, 10);
             this.ServerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ServerLabel.Name = "ServerLabel";
-            this.ServerLabel.Size = new System.Drawing.Size(42, 15);
+            this.ServerLabel.Size = new System.Drawing.Size(38, 13);
             this.ServerLabel.TabIndex = 2;
             this.ServerLabel.Text = "Server";
             // 
@@ -76,7 +77,7 @@
             this.DatabaseLabel.Location = new System.Drawing.Point(9, 35);
             this.DatabaseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DatabaseLabel.Name = "DatabaseLabel";
-            this.DatabaseLabel.Size = new System.Drawing.Size(60, 15);
+            this.DatabaseLabel.Size = new System.Drawing.Size(53, 13);
             this.DatabaseLabel.TabIndex = 3;
             this.DatabaseLabel.Text = "Database";
             // 
@@ -102,7 +103,7 @@
             this.UsernameLabel.Location = new System.Drawing.Point(9, 58);
             this.UsernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(65, 15);
+            this.UsernameLabel.Size = new System.Drawing.Size(55, 13);
             this.UsernameLabel.TabIndex = 6;
             this.UsernameLabel.Text = "Username";
             // 
@@ -112,7 +113,7 @@
             this.PasswordLabel.Location = new System.Drawing.Point(9, 80);
             this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(61, 15);
+            this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
             this.PasswordLabel.TabIndex = 7;
             this.PasswordLabel.Text = "Password";
             // 
@@ -131,7 +132,7 @@
             this.SaveLoginCheckBox.Location = new System.Drawing.Point(166, 14);
             this.SaveLoginCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SaveLoginCheckBox.Name = "SaveLoginCheckBox";
-            this.SaveLoginCheckBox.Size = new System.Drawing.Size(86, 19);
+            this.SaveLoginCheckBox.Size = new System.Drawing.Size(76, 17);
             this.SaveLoginCheckBox.TabIndex = 9;
             this.SaveLoginCheckBox.Text = "Save login";
             this.SaveLoginCheckBox.UseVisualStyleBackColor = true;
@@ -147,11 +148,23 @@
             this.ForgetLoginButton.UseVisualStyleBackColor = true;
             this.ForgetLoginButton.Click += new System.EventHandler(this.ForgetLoginButton_Click);
             // 
+            // DisclaimerButton
+            // 
+            this.DisclaimerButton.Location = new System.Drawing.Point(166, 80);
+            this.DisclaimerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DisclaimerButton.Name = "DisclaimerButton";
+            this.DisclaimerButton.Size = new System.Drawing.Size(76, 51);
+            this.DisclaimerButton.TabIndex = 11;
+            this.DisclaimerButton.Text = "Disclaimers and Info";
+            this.DisclaimerButton.UseVisualStyleBackColor = true;
+            this.DisclaimerButton.Click += new System.EventHandler(this.DisclaimerButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(250, 136);
+            this.Controls.Add(this.DisclaimerButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.DatabaseTextBox);
@@ -184,6 +197,7 @@
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.CheckBox SaveLoginCheckBox;
         private System.Windows.Forms.Button ForgetLoginButton;
+        private System.Windows.Forms.Button DisclaimerButton;
     }
 }
 
