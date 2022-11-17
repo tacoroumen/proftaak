@@ -33,6 +33,33 @@ float total_price = 0;
 // string for serial monitor
 String message;
 
+void mqtt_update()
+{
+  char currentstring[8];
+  float weight_kg = weight / 1000;
+  dtostrf(weight_kg, 1, 2, currentstring);
+  Serial.print("Weight in kg: ");
+  Serial.println(currentstring);
+  client.publish("proftaak/fontys/weight", currentstring);
+
+  currentstring[8];
+  float total_weight_kg = total_weight / 1000;
+  dtostrf(total_weight_kg, 1, 2, currentstring);
+  Serial.print("Total weight in kg: ");
+  Serial.println(currentstring);
+  client.publish("proftaak/fontys/total_weight", currentstring);
+
+  dtostrf(price, 1, 2, currentstring);
+  Serial.print("price in euro: ");
+  Serial.println(currentstring);
+  client.publish("proftaak/fontys/price", currentstring);
+
+  dtostrf(total_price, 1, 2, currentstring);
+  Serial.print("Total price in euro: ");
+  Serial.println(currentstring);
+  client.publish("proftaak/fontys/total_price", currentstring);
+}
+
 void calibrate()
 {
   LoadCell.tare();
@@ -69,8 +96,9 @@ void serialread()
         Serial.println("Please put the object you want to measure on the scale");
       }
       else if (message == "no") {
-        Serial.println("Thank you for using this!");
-        Serial.print("Your total money back is: ");
+        mqtt_update();
+        Serial.println("Thank you for using our project!");
+        Serial.println("Your total money back is: ");
         Serial.print(total_price);
         Serial.print(" euro");
         Serial.print('\n');
@@ -79,6 +107,7 @@ void serialread()
         Serial.print(" kilograms");
         total_price = 0;
         total_weight = 0;
+        mqtt_update();
         //print receipt for customer
       }
       message = ""; 
@@ -102,9 +131,9 @@ void measurements()
 
   priceofplastic(); // measure and print the price of the measured object
 
-  delay(1500);
+  delay(500);
   Serial.println("Please remove said object from the scale");
-  delay(3000);
+  delay(1000);
 
   Serial.println("Do you wish to continue measuring?");
   Serial.println("Send 'yes' if you wish to continue and 'no' if you wish to stop");
@@ -178,6 +207,7 @@ void reconnect()
       Serial.println("connected");
       // Subscribe
       client.subscribe("proftaak/fontys/led");
+      mqtt_update();
     }
     else
     {
@@ -188,33 +218,6 @@ void reconnect()
       delay(5000);
     }
   }
-}
-
-void mqqt_update()
-{
-  char currentstring[8];
-  float weight_kg = weight / 1000;
-  dtostrf(weight_kg, 1, 2, currentstring);
-  Serial.print("Weight in kg: ");
-  Serial.println(currentstring);
-  client.publish("proftaak/fontys/weight", currentstring);
-
-  currentstring[8];
-  float total_weight_kg = total_weight / 1000;
-  dtostrf(total_weight_kg, 1, 2, currentstring);
-  Serial.print("Total weight in kg: ");
-  Serial.println(currentstring);
-  client.publish("proftaak/fontys/total_weight", currentstring);
-
-  dtostrf(price, 1, 2, currentstring);
-  Serial.print("price in euro: ");
-  Serial.println(currentstring);
-  client.publish("proftaak/fontys/price", currentstring);
-
-  dtostrf(total_price, 1, 2, currentstring);
-  Serial.print("Total price in euro: ");
-  Serial.println(currentstring);
-  client.publish("proftaak/fontys/total_price", currentstring);
 }
 
 void setup()
@@ -242,12 +245,6 @@ void loop()
   if (weight > 1)
   {
     measurements(); // Function to measure weight once.
-    if (now - lastMsg > 5000)
-    {
-      lastMsg = now;
-      // Convert the value to a char array
-      mqqt_update();
-    }
   }
   serialread();
 }
