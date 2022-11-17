@@ -98,16 +98,14 @@ void serialread()
       else if (message == "no") {
         mqtt_update();
         Serial.println("Thank you for using our project!");
-        Serial.println("Your total money back is: ");
+        Serial.print("Your total money back is: ");
         Serial.print(total_price);
-        Serial.print(" euro");
-        Serial.print('\n');
+        Serial.println(" euro");
         Serial.print("The total weight of the measured objects is: ");
         Serial.print(total_weight / 1000);
-        Serial.print(" kilograms");
+        Serial.println(" kilograms");
         total_price = 0;
         total_weight = 0;
-        mqtt_update();
         //print receipt for customer
       }
       message = ""; 
