@@ -246,7 +246,7 @@ void loop()
     {
       lastMsg = now;
       // Convert the value to a char array
-      
+      mqqt_update();
     }
   }
   serialread();
