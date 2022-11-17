@@ -1,5 +1,3 @@
-//#include "include.h"
-//#include "functions.h"
 #include <Arduino.h>
 #include <WiFi.h>
 #include <HX711.h>
