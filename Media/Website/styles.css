@@ -7,7 +7,7 @@
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/Recycling-Graphic.png);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("img/Recycling-Graphic.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -140,7 +140,7 @@ nav .fa{
   text-align: center;
   padding-top: 130px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/1624848.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("img/1624848.jpg");
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -196,7 +196,7 @@ nav .fa{
   text-align: center;
   padding-top: 90px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/Elkor-Saver-Roosendaal_5261498.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("img/Elkor-Saver-Roosendaal_5261498.jpg");
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -251,7 +251,7 @@ nav .fa{
   text-align: center;
   padding-top: 90px;
 
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/dead\ animal.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("img/dead%20animal.jpg");
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -305,7 +305,7 @@ nav .fa{
   margin: auto;
   text-align: center;
   padding-top: 90px;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(./img/people\ working.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("img/people%20working.jpg");
   min-height: 100vh;
   width: 100%;
   background-position: center;
