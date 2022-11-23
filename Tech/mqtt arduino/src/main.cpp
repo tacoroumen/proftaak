@@ -131,7 +131,7 @@ void measurements()
 
   delay(500);
   Serial.println("Please remove said object from the scale");
-  delay(1000);
+  delay(500);
 
   Serial.println("Do you wish to continue measuring?");
   Serial.println("Send 'yes' if you wish to continue and 'no' if you wish to stop");
