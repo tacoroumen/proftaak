@@ -32,7 +32,6 @@ namespace SQL_server_DB_reader
             {
                 SaveLoginCheckBox.Checked = true;
             }
-
         }
 
         public string CaesarCipher(string input, bool encrypt)
@@ -112,7 +111,7 @@ namespace SQL_server_DB_reader
             {
                 SecuInfo = "False";
             }
-            //Data Source=:memory:;Initial Catalog=maindb;Persist Security Info=True;User ID=SA;Password=***********
+            
             ConString[0] = "Data Source=";
             ConString[1] = server;
             ConString[2] = ";Initial Catalog=";
@@ -123,7 +122,6 @@ namespace SQL_server_DB_reader
             ConString[7] = username;
             ConString[8] = ";Password=";
             ConString[9] = password;
-            //ConString[10] = ";";
 
             string ConStringFull = "";
             for (int i = 0; i < ConString.Length; i++)

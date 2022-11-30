@@ -61,6 +61,18 @@ namespace SQL_server_DB_reader
             return ConStringFull;
         }
 
+        private void DatabaseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ConString[3] != DatabaseComboBox.Text)
+            {
+                CollumCheckedListBox.Items.Clear();
+                TableComboBox.Text = "";
+            }
+            ConString[3] = DatabaseComboBox.Text;
+
+            TableComboBoxUpdate();
+        }
+
         void TableComboBoxUpdate()
         {
             TableComboBox.Items.Clear();
@@ -75,18 +87,6 @@ namespace SQL_server_DB_reader
                 TableComboBox.Items.Add(reader["name"]);
             }
             conn.Close();
-        }
-
-        private void DatabaseComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (ConString[3] != DatabaseComboBox.Text)
-            {
-                CollumCheckedListBox.Items.Clear();
-                TableComboBox.Text = "";
-            }
-            ConString[3] = DatabaseComboBox.Text;
-
-            TableComboBoxUpdate();
         }
 
         private void TableComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -173,7 +173,6 @@ namespace SQL_server_DB_reader
             SQLCommandRichTextBox.Text = StringBuild;
         }
 
-
         private void UpdateOutputButton_Click(object sender, EventArgs e)
         {
             string query = SQLCommandRichTextBox.Text;
@@ -237,6 +236,7 @@ namespace SQL_server_DB_reader
                         UsedColloms.Add(CheckedListBoxContent[locations[i]]);
                     }
                 }
+
                 if (UsedColloms[0] == "*")
                 {
                     QuerryOutputDataGridView.ColumnCount = CheckedListBoxContent.Count - 1;
