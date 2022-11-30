@@ -34,7 +34,61 @@ namespace SQL_server_DB_reader
             }
         }
 
-        public string CaesarCipher(string input, bool encrypt)
+        string[] ConString = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+
+        private void AnalyzeButton_Click(object sender, EventArgs e)
+        {
+            UpdateConString();
+
+            UpdateLoginDetails();
+
+            if (VerifyLogin()) {
+                Form2 form2 = new Form2(ConString);
+                form2.ShowDialog();
+            }
+        }
+
+        private void InsertButton_Click(object sender, EventArgs e)
+        {
+            UpdateConString();
+
+            UpdateLoginDetails();
+
+            if (VerifyLogin())
+            {
+                Form3 form3 = new Form3(ConString);
+                form3.ShowDialog();
+            }
+        }
+
+        private void DisclaimerButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" +
+                "1. Application only works on MS SQL servers. \n" +
+                "2. Most likely needs a port. \n" +
+                "3. You can change the DB later but its needed for a connection.\n" +
+                "4. All inputs are encrypted but not well so be carefull when sharing ur files.", 
+                "Disclaimers and Info");
+        }
+
+        private void ForgetLoginButton_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(@"DataFiles/Login/Server.txt", "");
+            File.WriteAllText(@"DataFiles/Login/Database.txt", "");
+            File.WriteAllText(@"DataFiles/Login/Username.txt", "");
+            File.WriteAllText(@"DataFiles/Login/Password.txt", "");
+
+            File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "n");
+
+            ServerTextBox.Text = "";
+            DatabaseTextBox.Text = "";
+            UsernameTextBox.Text = "";
+            PasswordTextBox.Text = "";
+
+            SaveLoginCheckBox.Checked = false;
+        }
+
+        string CaesarCipher(string input, bool encrypt)
         {
             string order = "wGho+[iYyZ>?JDU8}<fI&Frqx6Ov,A9a5lnp]2bjM|:z7QC.~`mgK4@^ENu()_WXTt-eV#$%H0/{ck1PL=SB!dRs3*'";  // exlcuding ; / and "  default caesar ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]',./{}|:<>?~`
             string output = "";
@@ -95,40 +149,19 @@ namespace SQL_server_DB_reader
             return output;
         }
 
-        string[] ConString = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-        private void AnalyzeButton_Click(object sender, EventArgs e)
+        string ConStringFull(string[] input)
         {
-            string server = ServerTextBox.Text;
-            string database = DatabaseTextBox.Text;
-            string username = UsernameTextBox.Text;
-            string password = PasswordTextBox.Text;
-            string SecuInfo = "";
-            if (SaveLoginCheckBox.Checked)
+            string output = "";
+            for (int i = 0; i < input.Length; i++)
             {
-                SecuInfo = "True";
+                output = output + input[i];
             }
-            else
-            {
-                SecuInfo = "False";
-            }
-            
-            ConString[0] = "Data Source=";
-            ConString[1] = server;
-            ConString[2] = ";Initial Catalog=";
-            ConString[3] = database;
-            ConString[4] = ";Persist Security Info=";
-            ConString[5] = SecuInfo;
-            ConString[6] = ";User ID=";
-            ConString[7] = username;
-            ConString[8] = ";Password=";
-            ConString[9] = password;
+            return output;
+        }
 
-            string ConStringFull = "";
-            for (int i = 0; i < ConString.Length; i++)
-            {
-                ConStringFull = ConStringFull + ConString[i];
-            }
-            SqlConnection conn = new SqlConnection(ConStringFull);
+        bool VerifyLogin()
+        {
+            SqlConnection conn = new SqlConnection(ConStringFull(ConString));
             bool login = true;
             try
             {
@@ -145,20 +178,43 @@ namespace SQL_server_DB_reader
                 conn.Close();
             }
 
-            
-            if (login) {
-                Form2 form2 = new Form2(ConString);
-                form2.ShowDialog();
-            }
+            return login;
+        }
 
+        void UpdateConString()
+        {
+            string SecuInfo = "";
             if (SaveLoginCheckBox.Checked)
             {
-                if (login)
+                SecuInfo = "True";
+            }
+            else
+            {
+                SecuInfo = "False";
+            }
+
+            ConString[0] = "Data Source=";
+            ConString[1] = ServerTextBox.Text;
+            ConString[2] = ";Initial Catalog=";
+            ConString[3] = DatabaseTextBox.Text;
+            ConString[4] = ";Persist Security Info=";
+            ConString[5] = SecuInfo;
+            ConString[6] = ";User ID=";
+            ConString[7] = UsernameTextBox.Text;
+            ConString[8] = ";Password=";
+            ConString[9] = PasswordTextBox.Text;
+        }
+
+        void UpdateLoginDetails()
+        {
+            if (SaveLoginCheckBox.Checked)
+            {
+                if (VerifyLogin())
                 {
-                    File.WriteAllText(@"DataFiles/Login/Server.txt", CaesarCipher(server, true));
-                    File.WriteAllText(@"DataFiles/Login/Database.txt", CaesarCipher(database, true));
-                    File.WriteAllText(@"DataFiles/Login/Username.txt", CaesarCipher(username, true));
-                    File.WriteAllText(@"DataFiles/Login/Password.txt", CaesarCipher(password, true));
+                    File.WriteAllText(@"DataFiles/Login/Server.txt", CaesarCipher(ServerTextBox.Text, true));
+                    File.WriteAllText(@"DataFiles/Login/Database.txt", CaesarCipher(DatabaseTextBox.Text, true));
+                    File.WriteAllText(@"DataFiles/Login/Username.txt", CaesarCipher(UsernameTextBox.Text, true));
+                    File.WriteAllText(@"DataFiles/Login/Password.txt", CaesarCipher(PasswordTextBox.Text, true));
                 }
 
                 File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "y");
@@ -169,31 +225,5 @@ namespace SQL_server_DB_reader
             }
         }
 
-        private void ForgetLoginButton_Click(object sender, EventArgs e)
-        {
-            File.WriteAllText(@"DataFiles/Login/Server.txt", "");
-            File.WriteAllText(@"DataFiles/Login/Database.txt", "");
-            File.WriteAllText(@"DataFiles/Login/Username.txt", "");
-            File.WriteAllText(@"DataFiles/Login/Password.txt", "");
-
-            File.WriteAllText(@"DataFiles/Login/SaveLogin.txt", "n");
-
-            ServerTextBox.Text = "";
-            DatabaseTextBox.Text = "";
-            UsernameTextBox.Text = "";
-            PasswordTextBox.Text = "";
-
-            SaveLoginCheckBox.Checked = false;
-        }
-
-        private void DisclaimerButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("" +
-                "1. Application only works on MS SQL servers. \n" +
-                "2. Most likely needs a port. \n" +
-                "3. You can change the DB later but its needed for a connection.\n" +
-                "4. All inputs are encrypted but not well so be carefull when sharing ur files.", 
-                "Disclaimers and Info");
-        }
     }
 }
