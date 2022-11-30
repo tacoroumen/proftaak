@@ -3,6 +3,10 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+*::selection {
+  color: black;
+  background: white;
+}
 
 .header {
   min-height: 100vh;
@@ -188,6 +192,10 @@ nav .fa{
   width: 30%;
   align-items: center;
 }
+.supermarkt h3:hover{
+  backdrop-filter: blur(10px);
+  border: 3px solid white;
+}
 
 /*-For the 3rd section, milieustraat-*/
 .milieustraat {
@@ -243,6 +251,11 @@ nav .fa{
   width: 30%;
   align-items: center;
 }
+.milieustraat h3:hover{
+  backdrop-filter: blur(10px);
+  border: 3px solid white;
+}
+
 
 /*-For the 4th section, invloed-*/
 .invloed {
@@ -298,6 +311,11 @@ nav .fa{
   width: 30%;
   align-items: center;
 }
+.invloed h3:hover{
+  backdrop-filter: blur(10px);
+  border: 3px solid white;
+}
+
 
 /*-For the 5th section, overons-*/
 .overons {
@@ -334,6 +352,7 @@ nav .fa{
   backdrop-filter: blur(0px); /*-- Adds a background blur to the navbar, set to 0 because i didnt
   like the blur but wanted to remember it existed --*/
   position: fixed; /*-- Makes it stay in the same place, even with scroll --*/
+  top: -50px; /*-- Makes it so the bar isnt there when you refresh the page --*/
   height: 30px; /*-- Changes the height of the blur or background, not used in this case --*/
   transition: top 0.3s; /*-- Adds the "animation" --*/
   z-index: 10000; /*-- Makes it so the navbar always appears on top --*/
@@ -348,6 +367,9 @@ nav .fa{
   padding: 8px;
   text-decoration: none;
   font-size: 10px;
+}
+#navbar a:hover {
+  color: gray;
 }
 
 #myBtn {
@@ -387,3 +409,4 @@ nav .fa{
 .footer .fa:hover {
   color: gray;
 }
+
