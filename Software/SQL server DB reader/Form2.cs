@@ -24,7 +24,7 @@ namespace SQL_server_DB_reader
 
             SqlConnection conn = new SqlConnection(ConStringFull());
             conn.Open();
-            string query = "SELECT name, database_id, create_date FROM sys.databases";
+            string query = "SELECT name FROM sys.databases";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
