@@ -1,13 +1,14 @@
 #include "MQTT.h"
-MQTT_prof::MQTT_prof(const char *mqtt_server, int port) {
+#include "Servo_prof.h"
+MQTT_prof.MQTT_prof(const char *mqtt_server, int port) {
   client.setServer(mqtt_server, 1883);
 }
-void MQTT_prof::upload(float _weight_kg) {
+void MQTT_prof.upload(float _weight_kg) {
   char _currentstring[8];
   dtostrf(_weight_kg, 1, 2, _currentstring);
   client.publish("fontys/weight", _currentstring);
 }
-void callback(char *topic, byte *message, unsigned int length)
+void MQTT_prof.callback(char *topic, byte *message, unsigned int length)
 {
   Serial.print("Message arrived on topic: ");
   Serial.print(topic);
@@ -31,20 +32,23 @@ void callback(char *topic, byte *message, unsigned int length)
     if (messageTemp == "paper")
     {
       Serial.println("paper");
-      
+      Servo_prof.paper();
+
     }
     else if (messageTemp == "general_waste")
     {
       Serial.println("general_waste");
+      Servo_prof.general_waste();
       
     }
     else if (messageTemp == "plastic")
     {
       Serial.println("plastic");
+      Servo_prof.plastic();
       
     }
   }
 }
-void callbackback () {
-  client.setCallback(callback);
+void MQTT_prof.callbackback () {
+  client.setCallback(MQTT_prof.callback);
 }
