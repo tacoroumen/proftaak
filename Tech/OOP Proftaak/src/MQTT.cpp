@@ -32,19 +32,19 @@ void MQTT_prof.callback(char *topic, byte *message, unsigned int length)
     if (messageTemp == "paper")
     {
       Serial.println("paper");
-      Servo_prof.paper();
+      Servo_prof::paper();
 
     }
     else if (messageTemp == "general_waste")
     {
       Serial.println("general_waste");
-      Servo_prof.general_waste();
+      Servo_prof::general_waste();
       
     }
     else if (messageTemp == "plastic")
     {
       Serial.println("plastic");
-      Servo_prof.plastic();
+      Servo_prof::plastic();
       
     }
   }
