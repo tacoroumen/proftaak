@@ -6,7 +6,7 @@ Network::Network(byte pin) {
   this->pin = pin;
   init();
 }
-void Network::init() {
+void Network::setup() {
   pinMode(pin, OUTPUT);
   // Always try to avoid duplicate code.
   // Instead of writing digitalWrite(pin, LOW) here,

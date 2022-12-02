@@ -6,11 +6,12 @@
 class Network {
   
   private:
-    byte pin;
+    char *ssid;
+    char *password;
     
   public:
-    Network(byte pin);
-    void init();
+    Network(char *ssid, char *password);
+    void setup();
     void on();
     void off();
 };
