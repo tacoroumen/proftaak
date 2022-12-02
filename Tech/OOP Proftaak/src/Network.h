@@ -1,5 +1,5 @@
-#ifndef MQTT_H
-#define MQTT_H
+#ifndef NETWORK_H
+#define NETWORK_H
 #include <Arduino.h>
 #include <WiFi.h>
 

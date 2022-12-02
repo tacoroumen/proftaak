@@ -3,16 +3,24 @@
 #include <Arduino.h>
 #include <HX711.h>
 #include <HX711_ADC.h>
+HX711 scale;
+const int _clockpin = 4;
+const int _datapin = 5;
+HX711_ADC LoadCell(_datapin, _clockpin);
 
 class Scale {
   
   private:
-    byte pin;
+    float _weight;
+    float _weight_kg;
+    int _clockpin;
+    int _datapin;
     
   public:
-    Scale(byte pin);
+    Scale(int _clockpin, int _datapin);
     void init();
-    void on();
-    void off();
+    void calibrate();
+    int measure();
+    
 };
 #endif
