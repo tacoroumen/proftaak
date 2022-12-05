@@ -1,54 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
+using System.Runtime.CompilerServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using uPLibrary.Networking.M2Mqtt;
-using uPLibrary.Networking.M2Mqtt.Messages;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Userinterface_proftaak
 {
     public partial class FormUser : Form
     {
-        MqttClient mqttClient;
-
         public FormUser()
         {
             InitializeComponent();
 
-            Task.Run(() =>
-            {
-                mqttClient = new MqttClient("145.220.75.105");
-                mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
-                mqttClient.Subscribe(new string[] { "proftaak/fontys/" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-                mqttClient.Connect("Yori", "proftaak", "04juLi2003!");
-            });
+
+            FormLogin obj = new FormLogin();
+            bool help;
+            help = obj.RadioButtonCompany.Checked;
+            ListBoxHistory.Items.Add(help.ToString());
+            //testing with radiobutton to display the correct form
         }
-        private void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
+        public MqttClient mqttClient;
+            //always null, needs to change to be able to connect
+        MQTT test = new MQTT();
+        
+        //connects to MQTT server correctly, does not do the message yet
+        //dont know how to get values from this to use in the button
+
+
+        public void ButtonStart_Click(object sender, EventArgs e)
         {
-            var message = Encoding.UTF8.GetString(e.Message);
-            ListBoxHistory.Invoke((MethodInvoker)(() => ListBoxHistory.Items.Add(message)));
-
-        }
-
-        private void ButtonStop_Click(object sender, EventArgs e)
-        {
-
-            Task.Run(() =>
+            //button for testing purpose, part of devkit
+            if (mqttClient != null && mqttClient.IsConnected)
             {
-                if (mqttClient != null && mqttClient.IsConnected)
-                {
-                    mqttClient.Publish("proftaak/fontys/", Encoding.UTF8.GetBytes("help"));
-
-                }
-            });
+                 mqttClient.Publish("proftaak/fontys/", Encoding.UTF8.GetBytes("help"));
+            }
         }
     }
 }

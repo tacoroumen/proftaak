@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Userinterface_proftaak
 {
@@ -16,5 +17,22 @@ namespace Userinterface_proftaak
         {
             InitializeComponent();
         }
+
+        private void ButtonScan_Click(object sender, EventArgs e)
+        {
+            if (RadioButtonCompany.Checked == true)
+            {
+                Hide();
+                FormCompany FormCompany = new FormCompany();
+                FormCompany.ShowDialog();
+            }
+            else
+            {
+                Hide();
+                FormUser FormUser = new FormUser();
+                FormUser.ShowDialog();
+            }
+        }
+        
     }
 }
