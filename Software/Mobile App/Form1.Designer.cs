@@ -46,7 +46,7 @@
             this.TempFullscreen.Location = new System.Drawing.Point(0, 0);
             this.TempFullscreen.Margin = new System.Windows.Forms.Padding(0);
             this.TempFullscreen.Name = "TempFullscreen";
-            this.TempFullscreen.Size = new System.Drawing.Size(120, 120);
+            this.TempFullscreen.Size = new System.Drawing.Size(160, 148);
             this.TempFullscreen.TabIndex = 1;
             this.TempFullscreen.Text = "Full Screen";
             this.TempFullscreen.UseVisualStyleBackColor = false;
@@ -54,9 +54,10 @@
             // 
             // ChooseAccountPanel
             // 
-            this.ChooseAccountPanel.Location = new System.Drawing.Point(98, 830);
+            this.ChooseAccountPanel.Location = new System.Drawing.Point(131, 1022);
+            this.ChooseAccountPanel.Margin = new System.Windows.Forms.Padding(4);
             this.ChooseAccountPanel.Name = "ChooseAccountPanel";
-            this.ChooseAccountPanel.Size = new System.Drawing.Size(840, 500);
+            this.ChooseAccountPanel.Size = new System.Drawing.Size(1120, 615);
             this.ChooseAccountPanel.TabIndex = 4;
             // 
             // ChooseAccountLabel
@@ -66,22 +67,23 @@
             this.ChooseAccountLabel.BackColor = System.Drawing.Color.Black;
             this.ChooseAccountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChooseAccountLabel.ForeColor = System.Drawing.Color.White;
-            this.ChooseAccountLabel.Location = new System.Drawing.Point(88, 772);
+            this.ChooseAccountLabel.Location = new System.Drawing.Point(119, 949);
+            this.ChooseAccountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ChooseAccountLabel.Name = "ChooseAccountLabel";
-            this.ChooseAccountLabel.Size = new System.Drawing.Size(378, 55);
+            this.ChooseAccountLabel.Size = new System.Drawing.Size(467, 69);
             this.ChooseAccountLabel.TabIndex = 5;
             this.ChooseAccountLabel.Text = "Choose Account";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1064, 1881);
+            this.ClientSize = new System.Drawing.Size(1062, 1055);
             this.Controls.Add(this.ChooseAccountLabel);
             this.Controls.Add(this.ChooseAccountPanel);
             this.Controls.Add(this.TempFullscreen);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

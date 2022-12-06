@@ -18,7 +18,7 @@ namespace Mobile_App
         public Form1()
         {
             InitializeComponent();
-
+            Size = new Size(1080, 1920);
             LoadCustomItems();
 
             //int UserCount = int.Parse(File.ReadAllText(@"DataFiles/User/UserCount.txt"));
