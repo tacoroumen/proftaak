@@ -1,0 +1,12 @@
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\bin\Debug\Mobile App.exe.config
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\bin\Debug\Mobile App.exe
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\bin\Debug\Mobile App.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile App.csproj.AssemblyReference.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile App.csproj.SuggestedBindingRedirects.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile_App.Form1.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile_App.Properties.Resources.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile App.csproj.GenerateResource.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile App.csproj.CoreCompileInputs.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile App.exe
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile App.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Mobile App\obj\Debug\Mobile_App.Form2.resources

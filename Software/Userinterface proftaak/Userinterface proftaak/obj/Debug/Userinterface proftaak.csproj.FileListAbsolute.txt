@@ -14,3 +14,19 @@ C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaa
 C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
 C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormCompany.resources
 C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe.config
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.dll
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.AssemblyReference.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.SuggestedBindingRedirects.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormCompany.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.Properties.Resources.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.GenerateResource.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CoreCompileInputs.cache
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CopyComplete
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.exe
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.pdb

@@ -35,3 +35,8 @@ C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL serv
 C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.csproj.CoreCompileInputs.cache
 C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.exe
 C:\Users\nieks\Desktop\proftaak\Software\SQL server DB reader\obj\Debug\SQL server DB reader.pdb
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.SqlMqttChoosing.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Login.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.Visualizer.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.ChooseUpload.resources
+C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\SQL server DB reader\obj\Debug\SQL_server_DB_reader.SqlInsert.resources
