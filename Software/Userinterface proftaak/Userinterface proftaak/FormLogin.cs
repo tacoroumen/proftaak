@@ -22,6 +22,7 @@ namespace Userinterface_proftaak
 
         private void ButtonScan_Click(object sender, EventArgs e)
         {
+            //might need to be replaced with just the button
             if (RadioButtonUser.Checked == true)
             {
                 Hide();
@@ -30,7 +31,7 @@ namespace Userinterface_proftaak
             }
             else
             {
-                //might be obsolete due to the "mobile" app
+                //might be obsolete due to the app
                 Hide();
                 FormCompany FormCompany = new FormCompany();
                 FormCompany.ShowDialog();

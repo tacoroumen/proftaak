@@ -86,6 +86,7 @@
             this.Controls.Add(this.GroupBoxUser);
             this.Controls.Add(this.ButtonScan);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.GroupBoxUser.ResumeLayout(false);
             this.GroupBoxUser.PerformLayout();
