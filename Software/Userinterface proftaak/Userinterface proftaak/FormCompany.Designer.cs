@@ -90,9 +90,9 @@
             this.LabelWaste.AutoSize = true;
             this.LabelWaste.Location = new System.Drawing.Point(286, 427);
             this.LabelWaste.Name = "LabelWaste";
-            this.LabelWaste.Size = new System.Drawing.Size(158, 25);
+            this.LabelWaste.Size = new System.Drawing.Size(155, 25);
             this.LabelWaste.TabIndex = 5;
-            this.LabelWaste.Text = "Residual waste";
+            this.LabelWaste.Text = "General Waste";
             // 
             // label1
             // 
@@ -176,6 +176,7 @@
             this.Controls.Add(this.ProgressBarPlastic);
             this.Controls.Add(this.ProgressBarPaper);
             this.Name = "FormCompany";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Company";
             this.ResumeLayout(false);
             this.PerformLayout();
