@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Mobile_App
 {
-    public partial class Form2 : Form
+    public partial class AddAccount : Form
     {
-        public Form2()
+        public AddAccount()
         {
             InitializeComponent();
+
+            Location = new Point(50, 50);
+        }
+
+        private void CloseForm2(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
