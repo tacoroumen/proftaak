@@ -77,7 +77,7 @@ namespace Userinterface_proftaak
             // LabelStop
             // 
             this.LabelStop.AutoSize = true;
-            this.LabelStop.Location = new System.Drawing.Point(373, 359);
+            this.LabelStop.Location = new System.Drawing.Point(370, 359);
             this.LabelStop.Name = "LabelStop";
             this.LabelStop.Size = new System.Drawing.Size(164, 25);
             this.LabelStop.TabIndex = 6;
@@ -95,7 +95,7 @@ namespace Userinterface_proftaak
             // 
             // ButtonStop
             // 
-            this.ButtonStop.Location = new System.Drawing.Point(378, 387);
+            this.ButtonStop.Location = new System.Drawing.Point(375, 387);
             this.ButtonStop.Name = "ButtonStop";
             this.ButtonStop.Size = new System.Drawing.Size(157, 85);
             this.ButtonStop.TabIndex = 8;

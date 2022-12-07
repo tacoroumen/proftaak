@@ -18,12 +18,11 @@ namespace Userinterface_proftaak
         {
             InitializeComponent();
 
-
             FormLogin obj = new FormLogin();
             bool help;
             help = obj.RadioButtonCompany.Checked;
             label3.Text = help.ToString();
-
+            //test obj
         }
     }
 

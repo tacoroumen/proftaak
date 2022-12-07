@@ -11,6 +11,8 @@ using System.Windows.Forms.VisualStyles;
 
 namespace Userinterface_proftaak
 {
+    //form might become just the "scan pasje" and no option to choose. Whether or not the company part will get used on the device itself is unclear for now
+    //prioritization lies in the User side, as this will definitely be used on the device
     public partial class FormLogin : Form
     {
         public FormLogin()
@@ -20,17 +22,18 @@ namespace Userinterface_proftaak
 
         private void ButtonScan_Click(object sender, EventArgs e)
         {
-            if (RadioButtonCompany.Checked == true)
-            {
-                Hide();
-                FormCompany FormCompany = new FormCompany();
-                FormCompany.ShowDialog();
-            }
-            else
+            if (RadioButtonUser.Checked == true)
             {
                 Hide();
                 FormUser FormUser = new FormUser();
                 FormUser.ShowDialog();
+            }
+            else
+            {
+                //might be obsolete due to the "mobile" app
+                Hide();
+                FormCompany FormCompany = new FormCompany();
+                FormCompany.ShowDialog();
             }
         }
         

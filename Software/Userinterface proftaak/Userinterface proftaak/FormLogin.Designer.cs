@@ -38,7 +38,7 @@
             // RadioButtonUser
             // 
             this.RadioButtonUser.AutoSize = true;
-            this.RadioButtonUser.Location = new System.Drawing.Point(6, 65);
+            this.RadioButtonUser.Location = new System.Drawing.Point(6, 30);
             this.RadioButtonUser.Name = "RadioButtonUser";
             this.RadioButtonUser.Size = new System.Drawing.Size(137, 29);
             this.RadioButtonUser.TabIndex = 4;
@@ -49,7 +49,7 @@
             // RadioButtonCompany
             // 
             this.RadioButtonCompany.AutoSize = true;
-            this.RadioButtonCompany.Location = new System.Drawing.Point(6, 30);
+            this.RadioButtonCompany.Location = new System.Drawing.Point(6, 65);
             this.RadioButtonCompany.Name = "RadioButtonCompany";
             this.RadioButtonCompany.Size = new System.Drawing.Size(166, 29);
             this.RadioButtonCompany.TabIndex = 5;

@@ -14,19 +14,35 @@ C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaa
 C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
 C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormCompany.resources
 C:\Users\yorischarnigg\source\repos\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe.config
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.pdb
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.dll
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.pdb
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.AssemblyReference.cache
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.SuggestedBindingRedirects.cache
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormCompany.resources
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.Properties.Resources.resources
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.GenerateResource.cache
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CoreCompileInputs.cache
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CopyComplete
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.exe
-C:\Users\nieks\OneDrive\Documenten\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.pdb
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe.config
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.pdb
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.dll
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.pdb
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.AssemblyReference.cache
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.SuggestedBindingRedirects.cache
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormCompany.resources
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.Properties.Resources.resources
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.GenerateResource.cache
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CoreCompileInputs.cache
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CopyComplete
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.exe
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.pdb
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe.config
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.pdb
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.dll
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.pdb
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.SuggestedBindingRedirects.cache
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormCompany.resources
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.Properties.Resources.resources
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.GenerateResource.cache
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CopyComplete
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.exe
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.pdb

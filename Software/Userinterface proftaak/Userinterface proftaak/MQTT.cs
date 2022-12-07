@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,35 +11,27 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 namespace Userinterface_proftaak
 {
 
+    //FAILED TO GET IT WORKING
+    //POSSIBLE WORKAROUND. All values can be declared in a class and then used in the main form.
+    //like mqttClient = new MqttClient (HostName). public string HostName { get; private set; } (to make it read only) in class
+
     public class MQTT
-    {
+    { 
+        public string HostName { get; private set; }
+        public string Client { get; private set; }
+        public string Username { get; private set; }
+        public string Password { get; private set; }
+        public string Mqtt_Path { get; private set; }
+
         public MqttClient mqttClient;
-        public MQTT() 
+
+        public MQTT()
         {
-            mqttClient = new MqttClient("145.220.75.105");
-            mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
-            mqttClient.Subscribe(new string[] { "proftaak/fontys/" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-            mqttClient.Connect("Yori", "proftaak", "04juLi2003!");
-
-            //these values need to be in FormUser somehow
-            //no progress made yet on this fact
-
-
-            if(mqttClient != null && mqttClient.IsConnected)
-            {
-                MessageBox.Show("hello"); //mqtt is connected correctly, only in this class
-            }
+            this.HostName = "145.220.75.105";
+            this.Client = "Yori";
+            this.Username = "proftaak";
+            this.Password = "04juLi2003!";
+            this.Mqtt_Path = "proftaak/fontys/";
         }
-
-        public void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
-        {
-            var message = Encoding.UTF8.GetString(e.Message);
-            return;
-            
-            //ListBoxHistory.Invoke((MethodInvoker)(() => ListBoxHistory.Items.Add(message)));
-
-        }
-
-
     }
 }
