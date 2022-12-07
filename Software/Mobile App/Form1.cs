@@ -13,13 +13,12 @@ using System.Drawing.Drawing2D;
 
 namespace Mobile_App
 {
-    public partial class Form1 : Form
+    public partial class Startup : Form
     {
-        public Form1()
+        public Startup()
         {
             InitializeComponent();
-            Size = new Size(1080, 1920);
-            LoadCustomItems();
+            // LoadCustomItems();
 
             //int UserCount = int.Parse(File.ReadAllText(@"DataFiles/User/UserCount.txt"));
             //if (UserCount != 0)
@@ -33,14 +32,6 @@ namespace Mobile_App
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
         }
-
-
-        //List<GroupBox> AccountGroupBoxes = new List<GroupBox>();
-        //List<Label> UsernameLabels = new List<Label>();
-        //List<Label> EmailLabels = new List<Label>();
-        //List<PictureBox> AvatarPictures = new List<PictureBox>();
-        //List<PictureBox> AccountTypePictures = new List<PictureBox>();
-
 
         void UpdateAccountList (int UserCount)
         {
@@ -61,50 +52,39 @@ namespace Mobile_App
                     bool bussiness = Convert.ToBoolean(reader["type"]);
                 }
                 conn.Close();
-
-                GroupBox GrBox = new GroupBox();
-                GrBox.Name = $"GrBox{i}";
-
-
-                Label lbl = new Label();
-                lbl.Name = $"lbl{i}";
-                lbl.Text = "";
             }
-        }
-
-        void LoadCustomItems ()
-        {
-            //
-            // add account button
-            //
-            Application.DoEvents();
-            RoundedButton AddAccountButton = new RoundedButton();
-            AddAccountButton.Text= "Add Account";
-            EventHandler myHandler = new EventHandler(AddAccountButton_Click);
-            AddAccountButton.Click += myHandler;
-            AddAccountButton.Location = new System.Drawing.Point(20, 1765);
-            AddAccountButton.Size = new System.Drawing.Size(1040, 135);
-            AddAccountButton.BackColor = System.Drawing.Color.FromArgb(53, 170, 68);
-            AddAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            AddAccountButton.ForeColor = System.Drawing.Color.White;
-            AddAccountButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            AddAccountButton.FlatAppearance.BorderSize = 0;
-
-            this.Controls.Add(AddAccountButton);
-            //
-            //
-            //
-        }
-
-        void AddAccountButton_Click (Object sender, System.EventArgs e)
-        {
-            MessageBox.Show("success");
         }
     }
 }
 
 #region not my code 
 //rounded button Credit: https://stackoverflow.com/questions/28486521/rounded-edges-in-button-c-sharp-winforms
+
+//void LoadCustomItems ()
+//{
+//    //
+//    // add account button
+//    //
+//    Application.DoEvents();
+//    RoundedButton AddAccountButton = new RoundedButton();
+//    AddAccountButton.Text= "Add Account";
+//    EventHandler myHandler = new EventHandler(AddAccountButton_Click);
+//    AddAccountButton.Click += myHandler;
+//    AddAccountButton.Location = new System.Drawing.Point(12, 75);
+//    AddAccountButton.Size = new System.Drawing.Size(388, 98);
+//    AddAccountButton.BackColor = System.Drawing.Color.FromArgb(53, 170, 68);
+//    AddAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+//    AddAccountButton.ForeColor = System.Drawing.Color.White;
+//    AddAccountButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+//    AddAccountButton.FlatAppearance.BorderSize = 0;
+
+//    this.Controls.Add(AddAccountButton);
+
+//    //
+//    //
+//    //
+//}
+
 class RoundedButton : Button
 {
     GraphicsPath GetRoundPath(RectangleF Rect, int radius)
