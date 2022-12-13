@@ -16,7 +16,7 @@ void Scale::calibrate() {
   pinMode(_clockpin, OUTPUT);
 }
 
-int Scale::measure() {
+float Scale::measure() {
   _weight = scale.get_units(10);
   _weight_kg = _weight / 1000;
   return _weight_kg;

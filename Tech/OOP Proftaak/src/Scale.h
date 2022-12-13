@@ -20,7 +20,7 @@ class Scale {
     Scale(int _clockpin, int _datapin);
     void init();
     void calibrate();
-    int measure();
+    float measure();
     
 };
 #endif

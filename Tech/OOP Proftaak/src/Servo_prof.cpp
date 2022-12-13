@@ -1,7 +1,6 @@
 #include "Servo_prof.h"
 Servo_prof::Servo_prof(int _pin) {
   this->_pin = _pin;
-  init();
 }
 
 void Servo_prof::init() {

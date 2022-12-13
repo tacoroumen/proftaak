@@ -13,7 +13,5 @@ class Network {
     Network(char *ssid, char *password);
     void setup();
     void wifi_setup();
-    void on();
-    void off();
 };
 #endif

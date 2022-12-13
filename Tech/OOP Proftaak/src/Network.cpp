@@ -25,9 +25,3 @@ void Network::wifi_setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 }
-void Network::on() {
-  digitalWrite(pin, HIGH);
-}
-void Network::off() {
-  digitalWrite(pin, LOW);
-}

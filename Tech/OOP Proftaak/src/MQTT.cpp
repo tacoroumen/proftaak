@@ -1,7 +1,7 @@
 #include "MQTT.h"
 #include "Servo_prof.h"
 MQTT_prof::MQTT_prof(const char *mqtt_server, int port) {
-  client.setServer(mqtt_server, 1883);
+  client.setServer(mqtt_server, port);
 }
 void MQTT_prof::upload(float _weight_kg) {
   char _currentstring[8];
