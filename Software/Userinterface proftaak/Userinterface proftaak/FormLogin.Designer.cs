@@ -26,79 +26,78 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
-            this.PictureBoxEnglish = new System.Windows.Forms.PictureBox();
-            this.PictureBoxDutch = new System.Windows.Forms.PictureBox();
-            this.RadioButtonDutch = new System.Windows.Forms.RadioButton();
-            this.RadioButtonEnglish = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEnglish)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxDutch)).BeginInit();
+            this.RadioButtonUser = new System.Windows.Forms.RadioButton();
+            this.RadioButtonCompany = new System.Windows.Forms.RadioButton();
+            this.ButtonScan = new System.Windows.Forms.Button();
+            this.GroupBoxUser = new System.Windows.Forms.GroupBox();
+            this.GroupBoxUser.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PictureBoxEnglish
+            // RadioButtonUser
             // 
-            this.PictureBoxEnglish.Image = global::Userinterface_proftaak.Properties.Resources.Flag_of_the_United_Kingdom_svg;
-            this.PictureBoxEnglish.Location = new System.Drawing.Point(596, 92);
-            this.PictureBoxEnglish.Name = "PictureBoxEnglish";
-            this.PictureBoxEnglish.Size = new System.Drawing.Size(156, 92);
-            this.PictureBoxEnglish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBoxEnglish.TabIndex = 1;
-            this.PictureBoxEnglish.TabStop = false;
+            this.RadioButtonUser.AutoSize = true;
+            this.RadioButtonUser.Location = new System.Drawing.Point(6, 30);
+            this.RadioButtonUser.Name = "RadioButtonUser";
+            this.RadioButtonUser.Size = new System.Drawing.Size(137, 29);
+            this.RadioButtonUser.TabIndex = 4;
+            this.RadioButtonUser.TabStop = true;
+            this.RadioButtonUser.Text = "Gebruiker";
+            this.RadioButtonUser.UseVisualStyleBackColor = true;
             // 
-            // PictureBoxDutch
+            // RadioButtonCompany
             // 
-            this.PictureBoxDutch.Image = global::Userinterface_proftaak.Properties.Resources._1200px_Flag_of_the_Netherlands_svg;
-            this.PictureBoxDutch.Location = new System.Drawing.Point(354, 92);
-            this.PictureBoxDutch.Name = "PictureBoxDutch";
-            this.PictureBoxDutch.Size = new System.Drawing.Size(156, 92);
-            this.PictureBoxDutch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBoxDutch.TabIndex = 0;
-            this.PictureBoxDutch.TabStop = false;
+            this.RadioButtonCompany.AutoSize = true;
+            this.RadioButtonCompany.Location = new System.Drawing.Point(6, 65);
+            this.RadioButtonCompany.Name = "RadioButtonCompany";
+            this.RadioButtonCompany.Size = new System.Drawing.Size(166, 29);
+            this.RadioButtonCompany.TabIndex = 5;
+            this.RadioButtonCompany.TabStop = true;
+            this.RadioButtonCompany.Text = "Vuilnisbedrijf";
+            this.RadioButtonCompany.UseVisualStyleBackColor = true;
             // 
-            // RadioButtonDutch
+            // ButtonScan
             // 
-            this.RadioButtonDutch.AutoSize = true;
-            this.RadioButtonDutch.Location = new System.Drawing.Point(420, 190);
-            this.RadioButtonDutch.Name = "RadioButtonDutch";
-            this.RadioButtonDutch.Size = new System.Drawing.Size(27, 26);
-            this.RadioButtonDutch.TabIndex = 2;
-            this.RadioButtonDutch.TabStop = true;
-            this.RadioButtonDutch.UseVisualStyleBackColor = true;
+            this.ButtonScan.Location = new System.Drawing.Point(445, 327);
+            this.ButtonScan.Name = "ButtonScan";
+            this.ButtonScan.Size = new System.Drawing.Size(189, 81);
+            this.ButtonScan.TabIndex = 6;
+            this.ButtonScan.Text = "Scan pasje";
+            this.ButtonScan.UseVisualStyleBackColor = true;
+            this.ButtonScan.Click += new System.EventHandler(this.ButtonScan_Click);
             // 
-            // RadioButtonEnglish
+            // GroupBoxUser
             // 
-            this.RadioButtonEnglish.AutoSize = true;
-            this.RadioButtonEnglish.Location = new System.Drawing.Point(661, 190);
-            this.RadioButtonEnglish.Name = "RadioButtonEnglish";
-            this.RadioButtonEnglish.Size = new System.Drawing.Size(27, 26);
-            this.RadioButtonEnglish.TabIndex = 3;
-            this.RadioButtonEnglish.TabStop = true;
-            this.RadioButtonEnglish.UseVisualStyleBackColor = true;
+            this.GroupBoxUser.Controls.Add(this.RadioButtonUser);
+            this.GroupBoxUser.Controls.Add(this.RadioButtonCompany);
+            this.GroupBoxUser.ForeColor = System.Drawing.Color.Black;
+            this.GroupBoxUser.Location = new System.Drawing.Point(445, 182);
+            this.GroupBoxUser.Name = "GroupBoxUser";
+            this.GroupBoxUser.Size = new System.Drawing.Size(189, 100);
+            this.GroupBoxUser.TabIndex = 7;
+            this.GroupBoxUser.TabStop = false;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 714);
-            this.Controls.Add(this.RadioButtonEnglish);
-            this.Controls.Add(this.RadioButtonDutch);
-            this.Controls.Add(this.PictureBoxEnglish);
-            this.Controls.Add(this.PictureBoxDutch);
+            this.ClientSize = new System.Drawing.Size(1117, 559);
+            this.Controls.Add(this.GroupBoxUser);
+            this.Controls.Add(this.ButtonScan);
             this.Name = "FormLogin";
-            this.Text = "Z";
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEnglish)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxDutch)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
+            this.GroupBoxUser.ResumeLayout(false);
+            this.GroupBoxUser.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox PictureBoxDutch;
-        private System.Windows.Forms.PictureBox PictureBoxEnglish;
-        private System.Windows.Forms.RadioButton RadioButtonDutch;
-        private System.Windows.Forms.RadioButton RadioButtonEnglish;
+        public System.Windows.Forms.RadioButton RadioButtonUser;
+        public System.Windows.Forms.RadioButton RadioButtonCompany;
+        public System.Windows.Forms.Button ButtonScan;
+        private System.Windows.Forms.GroupBox GroupBoxUser;
     }
 }
