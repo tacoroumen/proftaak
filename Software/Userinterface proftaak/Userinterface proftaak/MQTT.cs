@@ -21,13 +21,13 @@ namespace Userinterface_proftaak
         public string Password { get; private set; }
         public string PathWeight { get; private set; }
         public string PathMaterials { get; private set; }
-        public string PathPrice { get;  private set; }
+        public string PathPrice { get; private set; }
         public string UserID { get; private set; }
+        public MqttClient Mqttclient { get; private set; }
         public MQTT()
         {
             Login(); //get the values to login
         }
-
         public void Login()
         {
             //all information written here, could have just been declared in this single class and method, if this should be done is unclear 
@@ -42,6 +42,35 @@ namespace Userinterface_proftaak
             this.PathWeight = "fontys/weight";
             this.PathPrice = "fontys/price";
             this.UserID = "fontys/user";
+
+            this.Mqttclient = new MqttClient(HostName); //value created and saved in "MqttClient mqttClient"
+            this.Mqttclient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
+            this.Mqttclient.Subscribe(new string[] { PathMaterials, PathWeight, PathPrice, UserID }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
+            this.Mqttclient.Connect(Client, Username, Password);
+        }
+        public void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
+        {
+            var message = Encoding.UTF8.GetString(e.Message);
+
+            if (e.Topic == UserID)
+            {
+                MessageBox.Show(message);
+            }
+            if (e.Topic == PathMaterials) //Materials combobox, publish might not be needed due to possible need calculations inside software
+            {
+                MessageBox.Show(message);
+                //can define value to use it in other forms
+            }
+            else if (e.Topic == PathWeight) //Measured weight
+            {
+                MessageBox.Show(message);
+
+            }
+            else if (e.Topic == PathPrice) //Calculated price, subject to change due to difference in materials 
+            {                                                //Own calculation inside software might be necessary instead of technology
+                MessageBox.Show(message);
+            }
+            //listbox and textboxes for testing purposes
         }
     }
 }
