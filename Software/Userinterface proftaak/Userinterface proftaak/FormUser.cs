@@ -26,7 +26,7 @@ namespace Userinterface_proftaak
         Database database = new Database();
         public FormUser()
         {
-            MqttClient mqttClient = new MqttClient(mqttsettings.HostName);
+            new MqttClient(mqttsettings.HostName);
             InitializeComponent();
 
             TextBoxUsername.Text = mqttsettings.Client; //display the client as username, subject to change due to scanning the card
