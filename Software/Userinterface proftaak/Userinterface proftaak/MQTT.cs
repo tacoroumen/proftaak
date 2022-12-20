@@ -12,61 +12,73 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace Userinterface_proftaak
 {
-    public class MQTT
+    internal class MQTT
     {
         //create new private values
-        public string HostName { get; private set; }
-        public string Client { get; private set; }
-        public string Username { get; private set; }
-        public string Password { get; private set; }
-        public string PathWeight { get; private set; }
-        public string PathMaterials { get; private set; }
-        public string PathPrice { get; private set; }
-        public string UserID { get; private set; }
+        //values separated in classses and objects
+
+        
         public MqttClient Mqttclient { get; private set; }
-        public MQTT()
-        {
-            Login(); //get the values to login
-        }
-        public void Login()
-        {
-            //all information written here, could have just been declared in this single class and method, if this should be done is unclear 
-            //will ask for advice whether i should do that or leave it like this
-            //decided to change, can easily be reverted if needed but seemed very unnecesary
+        public string cardnumber { get; private set; }
 
-            this.HostName = "145.220.75.105";
-            this.Client = "Username of the user";
-            this.Username = "proftaak";
-            this.Password = "04juLi2003!";
-            this.PathMaterials = "fontys/material";
-            this.PathWeight = "fontys/weight";
-            this.PathPrice = "fontys/price";
-            this.UserID = "fontys/user";
+        private string hostname;
+        private string client;
+        private string username;
+        private string password;
+        private string useridcard;
 
-            this.Mqttclient = new MqttClient(HostName); //value created and saved in "MqttClient mqttClient"
+        private string price;
+        public string materials;
+        private string weight;
+       
+
+        public void Login(User logininfo)
+        {
+            User userid = new User("");//define userid from the scanned card
+            this.hostname = logininfo.MQTTHostName;
+            this.client = logininfo.MQTTClient;
+            this.username = logininfo.MQTTUsername;
+            this.password = logininfo.MQTTPassword;
+
+            this.useridcard = userid.UserIDCard;
+
+            this.Mqttclient = new MqttClient(hostname); //value created and saved in "MqttClient Mqttclient"
             this.Mqttclient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
-            this.Mqttclient.Subscribe(new string[] { PathMaterials, PathWeight, PathPrice, UserID }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-            this.Mqttclient.Connect(Client, Username, Password);
+            this.Mqttclient.Subscribe(new string[] { this.materials, this.weight, this.price, this.useridcard }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
+            this.Mqttclient.Connect(this.client, this.username, this.password);
         }
+
+        public void Products(Products products)
+        {
+            this.price = products.Price;
+            this.materials = products.Materials;
+            this.weight = products.Weight;
+
+        }
+
         public void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
         {
             var message = Encoding.UTF8.GetString(e.Message);
 
-            if (e.Topic == UserID)
+            if (e.Topic == this.useridcard)
             {
                 MessageBox.Show(message);
-            }
-            if (e.Topic == PathMaterials) //Materials combobox, publish might not be needed due to possible need calculations inside software
-            {
-                MessageBox.Show(message);
+                cardnumber = message;
+
                 //can define value to use it in other forms
             }
-            else if (e.Topic == PathWeight) //Measured weight
+            if (e.Topic == this.materials) //Materials combobox, publish might not be needed due to possible need calculations inside software
+            {
+                MessageBox.Show(message);
+                materials = message;
+
+            }
+            else if (e.Topic == this.weight) //Measured weight
             {
                 MessageBox.Show(message);
 
             }
-            else if (e.Topic == PathPrice) //Calculated price, subject to change due to difference in materials 
+            else if (e.Topic == this.price) //Calculated price, subject to change due to difference in materials 
             {                                                //Own calculation inside software might be necessary instead of technology
                 MessageBox.Show(message);
             }
@@ -84,3 +96,5 @@ namespace Userinterface_proftaak
 //subquery met dat de datum groter moet zijn dan dat 
 //fontys/status   message = Done als klaar en = Busy als uid vergeleken is in database en een valide waarde heeft
 //popup als niet goed is-> card not recognized en status = Denied 
+
+//data encryption

@@ -13,19 +13,17 @@ using System.Windows.Forms;
 
 namespace Userinterface_proftaak
 {
-
     //to choose which method, make if statement and call a value from FormUser. The value will be changed on what needs to be done
     //example: when paper, string test is canged to "paper". This value will be called in this class and then be used to determine which method to choose
     internal class Database
     {
-        public string connectionstring { get; private set; }
-        public SqlConnection connection { get; private set; }
+        public string Connectionstring { get; private set; }//define values so they can be used across the class
+        public SqlConnection Connection { get; private set; }
         public void ConnectionDatabase()
         {
-            connectionstring = @"Data Source=145.220.75.105;Initial Catalog=Recycle Project;User Id=SA;Password=04juLi2003!";
-            connection = new SqlConnection(connectionstring);
-            connection.Open();
-            MessageBox.Show("connection established");
+            Connectionstring = @"Data Source=145.220.75.105;Initial Catalog=Recycle Project;User Id=SA;Password=04juLi2003!";
+            Connection = new SqlConnection(Connectionstring);
+            Connection.Open();
             //close connection every time a query is made. It is not good to use the same connection for multiple query
         }
 
@@ -44,14 +42,13 @@ namespace Userinterface_proftaak
 
             //read from database
             string query = "SELECT * FROM sys.databases";//define the query 
-            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlCommand cmd = new SqlCommand(query, Connection);
             SqlDataReader reader = cmd.ExecuteReader();//define reader
             while (reader.Read()) //get values from the database
             {
                 MessageBox.Show(reader["name"].ToString());
-                connection.Close();
-                return; //to prevent infinite loop
             }
+            Connection.Close();
         }
 
         public void WriteDatabase()//test method
@@ -59,10 +56,15 @@ namespace Userinterface_proftaak
             ConnectionDatabase();//establish connection
 
             //insert into database
-            string query = "d"; //query you want to insert || sring query = *insert*
-            SqlCommand cmd = new SqlCommand(query, connection); //SqlCommand cmd = new SqlCommand(query, connection);
+            string query = "INSERT INTO Weights (Weight) VALUES (3)"; //query you want to insert || sring query = *insert*
+            SqlCommand cmd = new SqlCommand(query, Connection); //SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
-            connection.Close();
+            Connection.Close();
+        }
+
+        public void ValidateCard(string userid)
+        {
+            ConnectionDatabase();
         }
     }
 }

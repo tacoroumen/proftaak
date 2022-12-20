@@ -37,6 +37,7 @@
             // RadioButtonUser
             // 
             this.RadioButtonUser.AutoSize = true;
+            this.RadioButtonUser.Checked = true;
             this.RadioButtonUser.Location = new System.Drawing.Point(6, 30);
             this.RadioButtonUser.Name = "RadioButtonUser";
             this.RadioButtonUser.Size = new System.Drawing.Size(137, 29);
