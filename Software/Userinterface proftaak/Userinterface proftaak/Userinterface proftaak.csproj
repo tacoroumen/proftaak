@@ -191,11 +191,23 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUser.cs">
+    <Compile Include="FormMeasuring.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUser.Designer.cs">
-      <DependentUpon>FormUser.cs</DependentUpon>
+    <Compile Include="FormMeasuring.Designer.cs">
+      <DependentUpon>FormMeasuring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResults.Designer.cs">
+      <DependentUpon>FormResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectMaterials.Designer.cs">
+      <DependentUpon>FormSelectMaterials.cs</DependentUpon>
     </Compile>
     <Compile Include="MQTT.cs" />
     <Compile Include="Products.cs" />
@@ -205,8 +217,14 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUser.resx">
-      <DependentUpon>FormUser.cs</DependentUpon>
+    <EmbeddedResource Include="FormMeasuring.resx">
+      <DependentUpon>FormMeasuring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResults.resx">
+      <DependentUpon>FormResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectMaterials.resx">
+      <DependentUpon>FormSelectMaterials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

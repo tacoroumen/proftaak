@@ -22,7 +22,6 @@ Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.AssemblyReference.cache
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.SuggestedBindingRedirects.cache
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
-Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.Properties.Resources.resources
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.GenerateResource.cache
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CoreCompileInputs.cache
@@ -156,3 +155,6 @@ Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Text
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Text.Json.xml
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Threading.Tasks.Extensions.xml
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.ValueTuple.xml
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormMeasuring.resources
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormResults.resources
+Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormSelectMaterials.resources

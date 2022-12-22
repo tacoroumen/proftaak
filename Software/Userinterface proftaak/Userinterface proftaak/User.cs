@@ -13,7 +13,7 @@ namespace Userinterface_proftaak
         public string MQTTClient {  get; private set; }
         public string MQTTUsername { get; private set; }
         public string MQTTPassword { get; private set; }
-        public string UserIDCard { get; private set; } //Can make a "get" where this is set to an if it is null, return x.
+        public string UserIDCard { get; private set; }
 
         public User(string hostname, string client, string username, string password)
         {
@@ -28,8 +28,8 @@ namespace Userinterface_proftaak
         }
         public User(string userid)
         {
-            string useridcard = "fontys/userid";
-            this.UserIDCard = useridcard;
+            userid = "fontys/user";
+            this.UserIDCard = userid;
         }
     }
 }

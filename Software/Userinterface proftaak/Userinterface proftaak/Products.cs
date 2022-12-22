@@ -12,6 +12,8 @@ namespace Userinterface_proftaak
         public string Materials { get; private set; }
         public string Weight { get; private set; }
         public string Price { get; private set; }
+        public int Selectedmaterial { get; set; }
+
         public Products(string materials, string weight, string price)
         {
             price = "fontys/price";
@@ -20,9 +22,6 @@ namespace Userinterface_proftaak
             this.Price = price;
             this.Materials = materials;
             this.Weight = weight;
-        }
-        public Products() 
-        { 
         }
     }
 }

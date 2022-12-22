@@ -19,7 +19,12 @@ namespace Userinterface_proftaak
 
         
         public MqttClient Mqttclient { get; private set; }
-        public string cardnumber { get; private set; }
+        public string Cardnumber { get; private set; }
+        public string Selectedmaterials { get; private set; }
+        public string weightvalue { get; private set; }
+        public string Pricevalue { get; private set; }
+
+        //have to declare these v alues as using the default values like price and weight will not give output back
 
         private string hostname;
         private string client;
@@ -28,13 +33,13 @@ namespace Userinterface_proftaak
         private string useridcard;
 
         private string price;
-        public string materials;
         private string weight;
-       
+        private string materials;
 
         public void Login(User logininfo)
         {
             User userid = new User("");//define userid from the scanned card
+
             this.hostname = logininfo.MQTTHostName;
             this.client = logininfo.MQTTClient;
             this.username = logininfo.MQTTUsername;
@@ -45,7 +50,7 @@ namespace Userinterface_proftaak
             this.Mqttclient = new MqttClient(hostname); //value created and saved in "MqttClient Mqttclient"
             this.Mqttclient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
             this.Mqttclient.Subscribe(new string[] { this.materials, this.weight, this.price, this.useridcard }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
-            this.Mqttclient.Connect(this.client, this.username, this.password);
+            this.Mqttclient.Connect(this.client, this.username, this.password); //server connection
         }
 
         public void Products(Products products)
@@ -53,7 +58,6 @@ namespace Userinterface_proftaak
             this.price = products.Price;
             this.materials = products.Materials;
             this.weight = products.Weight;
-
         }
 
         public void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
@@ -62,25 +66,20 @@ namespace Userinterface_proftaak
 
             if (e.Topic == this.useridcard)
             {
-                MessageBox.Show(message);
-                cardnumber = message;
-
-                //can define value to use it in other forms
+                //MessageBox.Show(message);
+                Cardnumber = message;
             }
             if (e.Topic == this.materials) //Materials combobox, publish might not be needed due to possible need calculations inside software
             {
-                MessageBox.Show(message);
-                materials = message;
-
+                Selectedmaterials = message;
             }
             else if (e.Topic == this.weight) //Measured weight
             {
-                MessageBox.Show(message);
-
+                weightvalue = message;
             }
             else if (e.Topic == this.price) //Calculated price, subject to change due to difference in materials 
             {                                                //Own calculation inside software might be necessary instead of technology
-                MessageBox.Show(message);
+                Pricevalue = message;
             }
             //listbox and textboxes for testing purposes
         }
