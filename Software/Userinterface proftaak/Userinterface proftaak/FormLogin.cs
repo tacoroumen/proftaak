@@ -19,8 +19,6 @@ namespace Userinterface_proftaak
         public FormLogin()
         {
             InitializeComponent();
-
-
             //mqttsettings.Products(products);//define the values from products
             //mqttsettings.Login(login);//define login credentials for MQTT server and the database
             //cannot even use values in other classes. DBUser is completely shut out when I do not login only there.
@@ -39,12 +37,12 @@ namespace Userinterface_proftaak
             {
                 dBUser.CardValidation();
                 bool valid = database.Valid;
-                if (valid)
-                {
+                //if (valid)
+                //{
                     FormSelectMaterials FormUser = new FormSelectMaterials();
                     FormUser.ShowDialog();
                     opened = true; //return value to get out of while loop
-                }
+                //}
             }
         }
     }

@@ -7,10 +7,11 @@
         public string WeightPath { get; private set; }
         public string PricePath { get; private set; }
         public int Selectedmaterial { get; private set; }
+
         public Products()
         {
-
         }
+
         public Products(string materials, string weight, string price)
         {
             price = "fontys/price";
@@ -20,7 +21,7 @@
             this.MaterialsPath = materials;
             this.WeightPath = weight;
         }
-        public Products(int materialid)
+        public void SetMaterial(int materialid)
         {
             Selectedmaterial = materialid;
         }

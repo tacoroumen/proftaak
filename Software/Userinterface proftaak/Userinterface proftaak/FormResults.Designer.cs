@@ -47,12 +47,12 @@ namespace Userinterface_proftaak
             // 
             this.LabelUsername.AutoSize = true;
             this.LabelUsername.BackColor = System.Drawing.Color.White;
-            this.LabelUsername.Font = new System.Drawing.Font("HP Simplified", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelUsername.Font = new System.Drawing.Font("HP Simplified", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelUsername.Location = new System.Drawing.Point(829, 111);
+            this.LabelUsername.Location = new System.Drawing.Point(879, 118);
             this.LabelUsername.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.LabelUsername.Name = "LabelUsername";
-            this.LabelUsername.Size = new System.Drawing.Size(205, 31);
+            this.LabelUsername.Size = new System.Drawing.Size(322, 50);
             this.LabelUsername.TabIndex = 14;
             this.LabelUsername.Text = "Gebruikersnaam";
             // 
@@ -64,11 +64,11 @@ namespace Userinterface_proftaak
             this.LabelWeight.BackColor = System.Drawing.Color.White;
             this.LabelWeight.Font = new System.Drawing.Font("HP Simplified", 46.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelWeight.Location = new System.Drawing.Point(315, 492);
+            this.LabelWeight.Location = new System.Drawing.Point(337, 540);
             this.LabelWeight.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.LabelWeight.Name = "LabelWeight";
             this.LabelWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LabelWeight.Size = new System.Drawing.Size(446, 133);
+            this.LabelWeight.Size = new System.Drawing.Size(608, 144);
             this.LabelWeight.TabIndex = 15;
             this.LabelWeight.Text = "0.00";
             this.LabelWeight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,9 +85,9 @@ namespace Userinterface_proftaak
             this.ButtonSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ButtonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSignOut.ForeColor = System.Drawing.Color.Transparent;
-            this.ButtonSignOut.Location = new System.Drawing.Point(991, 689);
+            this.ButtonSignOut.Location = new System.Drawing.Point(1062, 770);
             this.ButtonSignOut.Name = "ButtonSignOut";
-            this.ButtonSignOut.Size = new System.Drawing.Size(515, 150);
+            this.ButtonSignOut.Size = new System.Drawing.Size(551, 172);
             this.ButtonSignOut.TabIndex = 16;
             this.ButtonSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ButtonSignOut.UseVisualStyleBackColor = false;
@@ -105,9 +105,9 @@ namespace Userinterface_proftaak
             this.ButtonContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ButtonContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonContinue.ForeColor = System.Drawing.Color.Transparent;
-            this.ButtonContinue.Location = new System.Drawing.Point(391, 689);
+            this.ButtonContinue.Location = new System.Drawing.Point(414, 770);
             this.ButtonContinue.Name = "ButtonContinue";
-            this.ButtonContinue.Size = new System.Drawing.Size(543, 150);
+            this.ButtonContinue.Size = new System.Drawing.Size(581, 172);
             this.ButtonContinue.TabIndex = 17;
             this.ButtonContinue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ButtonContinue.UseVisualStyleBackColor = false;
@@ -121,11 +121,11 @@ namespace Userinterface_proftaak
             this.LabelMaterial.BackColor = System.Drawing.Color.White;
             this.LabelMaterial.Font = new System.Drawing.Font("HP Simplified", 46.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelMaterial.Location = new System.Drawing.Point(932, 492);
+            this.LabelMaterial.Location = new System.Drawing.Point(1110, 534);
             this.LabelMaterial.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.LabelMaterial.Name = "LabelMaterial";
             this.LabelMaterial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LabelMaterial.Size = new System.Drawing.Size(541, 133);
+            this.LabelMaterial.Size = new System.Drawing.Size(620, 156);
             this.LabelMaterial.TabIndex = 18;
             this.LabelMaterial.Text = "Material";
             this.LabelMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -138,11 +138,11 @@ namespace Userinterface_proftaak
             this.LabelKG.BackColor = System.Drawing.Color.White;
             this.LabelKG.Font = new System.Drawing.Font("HP Simplified", 46.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelKG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelKG.Location = new System.Drawing.Point(743, 492);
+            this.LabelKG.Location = new System.Drawing.Point(921, 540);
             this.LabelKG.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.LabelKG.Name = "LabelKG";
             this.LabelKG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LabelKG.Size = new System.Drawing.Size(215, 142);
+            this.LabelKG.Size = new System.Drawing.Size(197, 144);
             this.LabelKG.TabIndex = 19;
             this.LabelKG.Text = "kg";
             this.LabelKG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,7 +153,7 @@ namespace Userinterface_proftaak
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("HP Simplified", 46.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.label1.Location = new System.Drawing.Point(335, 350);
+            this.label1.Location = new System.Drawing.Point(463, 410);
             this.label1.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -168,15 +168,14 @@ namespace Userinterface_proftaak
             this.LabelKGGeneralWaste.BackColor = System.Drawing.Color.White;
             this.LabelKGGeneralWaste.Font = new System.Drawing.Font("HP Simplified", 46.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelKGGeneralWaste.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelKGGeneralWaste.Location = new System.Drawing.Point(601, 497);
+            this.LabelKGGeneralWaste.Location = new System.Drawing.Point(720, 552);
             this.LabelKGGeneralWaste.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.LabelKGGeneralWaste.Name = "LabelKGGeneralWaste";
             this.LabelKGGeneralWaste.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LabelKGGeneralWaste.Size = new System.Drawing.Size(215, 142);
+            this.LabelKGGeneralWaste.Size = new System.Drawing.Size(195, 143);
             this.LabelKGGeneralWaste.TabIndex = 21;
             this.LabelKGGeneralWaste.Text = "kg";
             this.LabelKGGeneralWaste.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LabelKGGeneralWaste.Visible = false;
             // 
             // LabelWeightGeneralWaste
             // 
@@ -184,30 +183,28 @@ namespace Userinterface_proftaak
             this.LabelWeightGeneralWaste.BackColor = System.Drawing.Color.White;
             this.LabelWeightGeneralWaste.Font = new System.Drawing.Font("HP Simplified", 46.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelWeightGeneralWaste.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelWeightGeneralWaste.Location = new System.Drawing.Point(181, 497);
+            this.LabelWeightGeneralWaste.Location = new System.Drawing.Point(290, 551);
             this.LabelWeightGeneralWaste.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.LabelWeightGeneralWaste.Name = "LabelWeightGeneralWaste";
             this.LabelWeightGeneralWaste.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LabelWeightGeneralWaste.Size = new System.Drawing.Size(446, 133);
+            this.LabelWeightGeneralWaste.Size = new System.Drawing.Size(440, 133);
             this.LabelWeightGeneralWaste.TabIndex = 22;
             this.LabelWeightGeneralWaste.Text = "0.00";
             this.LabelWeightGeneralWaste.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LabelWeightGeneralWaste.Visible = false;
             // 
             // LabelGeneralWaste
             // 
             this.LabelGeneralWaste.BackColor = System.Drawing.Color.White;
             this.LabelGeneralWaste.Font = new System.Drawing.Font("HP Simplified", 46.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelGeneralWaste.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelGeneralWaste.Location = new System.Drawing.Point(802, 497);
+            this.LabelGeneralWaste.Location = new System.Drawing.Point(895, 552);
             this.LabelGeneralWaste.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.LabelGeneralWaste.Name = "LabelGeneralWaste";
             this.LabelGeneralWaste.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LabelGeneralWaste.Size = new System.Drawing.Size(818, 133);
+            this.LabelGeneralWaste.Size = new System.Drawing.Size(818, 143);
             this.LabelGeneralWaste.TabIndex = 23;
             this.LabelGeneralWaste.Text = "General Waste";
             this.LabelGeneralWaste.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.LabelGeneralWaste.Visible = false;
             // 
             // FormResults
             // 
@@ -215,7 +212,7 @@ namespace Userinterface_proftaak
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.ClientSize = new System.Drawing.Size(2022, 1129);
             this.Controls.Add(this.LabelGeneralWaste);
             this.Controls.Add(this.LabelWeightGeneralWaste);
             this.Controls.Add(this.LabelKGGeneralWaste);
@@ -227,7 +224,7 @@ namespace Userinterface_proftaak
             this.Controls.Add(this.LabelWeight);
             this.Controls.Add(this.LabelUsername);
             this.DoubleBuffered = true;
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MaximumSize = new System.Drawing.Size(2048, 1200);
             this.Name = "FormResults";
             this.Text = "FormResults";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

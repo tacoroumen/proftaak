@@ -10,13 +10,6 @@ namespace Userinterface_proftaak
         //create new private values
         //values separated in classses and objects
 
-        public MqttClient Mqttclient { get; private set; }
-        public string Cardnumber { get; private set; }
-        public string Pricevalue { get; private set; }
-        public double Weightvalue { get; private set; }
-
-        //have to declare these v alues as using the default values like price and weight will not give output back
-
         private string hostname;
         private string client;
         private string username;
@@ -26,6 +19,11 @@ namespace Userinterface_proftaak
         private string price;
         private string weight;
         private string materials;
+
+        public MqttClient Mqttclient { get; private set; }
+        public string Cardnumber { get; private set; }
+        public string Pricevalue { get; private set; }
+        public double Weightvalue { get; private set; }
 
         public void Login(LoginInfo logininfo)
         {
@@ -82,3 +80,4 @@ namespace Userinterface_proftaak
 //popup als niet goed is-> card not recognized en status = Denied 
 
 //data encryption
+

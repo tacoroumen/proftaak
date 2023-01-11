@@ -11,11 +11,13 @@ namespace Userinterface_proftaak
         LoginInfo login = new LoginInfo();
         Products products = new Products("", "", "");
         Database database = new Database();
+        private int Material;
 
-        public FormMeasuring()
+        public FormMeasuring(int Material)
         {
             InitializeComponent();
             LabelUsername.Text = database.Username;
+            this.Material = Material;
         }
 
         private void FormMeasuring_Load(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace Userinterface_proftaak
                 if (mqttsettings.Weightvalue > 0 && !opened)
                 {
                     // MessageBox.Show(mqttsettings.weightvalue);
-                    FormResults formResults = new FormResults();
+                    FormResults formResults = new FormResults(Material);
                     formResults.ShowDialog();
                     opened = true;
                 }

@@ -12,7 +12,7 @@ namespace Userinterface_proftaak
         private string Connectionstring;
         private SqlConnection Connection;
         public bool Valid { get; private set; }
-        public string Username { get ; private set; }
+        public string Username { get; private set; }
 
         public void ConnectionDatabase() //security issue
         {
@@ -40,30 +40,24 @@ namespace Userinterface_proftaak
             string query = "SELECT UUID FROM Users";//define the query 
             SqlCommand cmd = new SqlCommand(query, Connection);
             SqlDataReader reader = cmd.ExecuteReader();//define reader
-            
-            while (Valid == false)
+            reader.Read();
+            if (userid == reader["UUID"].ToString())
             {
-                reader.Read();
-                if (userid == reader["UUID"].ToString())
-                {
-                    Valid = true;
-                    query = $"SELECT Username FROM Users WHERE UUID = '{userid}'";
-                    SqlCommand cmd2 = new SqlCommand(query, Connection);
-                    SqlDataReader reader2 = cmd2.ExecuteReader();
-                    reader2.Read();
-                    Username = reader2["Username"].ToString();
-                    reader.Close();
-                    reader2.Close();
-                    Connection.Close();
-                }
-                else if (userid != null)
-                {
-                    MessageBox.Show("Invalid Card");
-                    userid = null; //reset the value to null so it is not stuck in a loop of a million messageboxes
-                }
-                //MessageBox.Show(reader["name"].ToString());
+                Valid = true;
+                query = $"SELECT Username FROM Users WHERE UUID = '{userid}'";
+                SqlCommand cmd2 = new SqlCommand(query, Connection);
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+                reader2.Read();
+                Username = reader2["Username"].ToString();
+                reader.Close();
+                reader2.Close();
+                Connection.Close();
             }
-            //return;
+            else
+            {
+                MessageBox.Show("Invalid Card");
+                userid = null; //reset the value to null so it is not stuck in a loop of a million messageboxes
+            }
         }
     }
 }

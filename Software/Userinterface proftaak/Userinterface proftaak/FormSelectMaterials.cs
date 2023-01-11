@@ -14,7 +14,6 @@ namespace Userinterface_proftaak
         Database database = new Database();
         public string Selectedmaterials;
         private int Material;
-
         public FormSelectMaterials()
         {
             //issue because login. is empty. the declared value is not a public get set, so it cannot be called. Must be called from login method inside of MQTT
@@ -37,26 +36,27 @@ namespace Userinterface_proftaak
         {
             Material = (int)MaterialType.Plastic; //not functional
             MessageBox.Show(((int)MaterialType.Plastic).ToString());
-            SelectedMaterial(Material);
+            SelectedMaterial();
         }
 
         private void ButtonPaper_Click(object sender, EventArgs e)
         {
             Material = (int)MaterialType.Paper; //not functional
-            SelectedMaterial(Material);
+            SelectedMaterial();
         }
 
         private void ButtonGeneralWaste_Click(object sender, EventArgs e)
         {
             Material = (int)MaterialType.GeneralWaste; //not functional
-            SelectedMaterial(Material);
+            SelectedMaterial();
         }
 
-        private void SelectedMaterial(int Material)
+        private void SelectedMaterial()
         {
-            new Products(Material); //change Selectedmaterial to Material
+            
+            //new Products(Material); //change Selectedmaterial to Material
             Hide();
-            FormMeasuring formMeasuring = new FormMeasuring();
+            FormMeasuring formMeasuring = new FormMeasuring(Material);
             formMeasuring.ShowDialog();
         }
     }

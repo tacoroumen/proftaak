@@ -14,10 +14,12 @@ namespace Userinterface_proftaak
 
         delegate void SetTextCallback(string text);
 
-        public FormResults()
+        public FormResults(int Material)
         {
             InitializeComponent();
             LabelUsername.Text = database.Username;
+            products.SetMaterial(Material);
+
         }
         private void FormResults_Load(object sender, EventArgs e)
         {
@@ -34,7 +36,7 @@ namespace Userinterface_proftaak
 
         private void SetTextMaterial(string text)
         {
-            if (this.LabelMaterial.InvokeRequired)
+            if (this.LabelMaterial.InvokeRequired && this.LabelGeneralWaste.InvokeRequired)
             {
                 SetTextCallback d = new SetTextCallback(SetTextMaterial);
                 this.Invoke(d, new object[] { text });
@@ -46,12 +48,18 @@ namespace Userinterface_proftaak
                     text = "Plastic";
                     this.LabelMaterial.Text = text;
                     MessageBox.Show("plastic");
+                    this.LabelGeneralWaste.Hide();
+                    this.LabelKGGeneralWaste.Hide();
+                    this.LabelWeightGeneralWaste.Hide();
                 }
                 else if (products.Selectedmaterial == 1)
                 {
                     text = "Paper";
                     this.LabelMaterial.Text = text;
                     MessageBox.Show("Paper");
+                    this.LabelGeneralWaste.Hide();
+                    this.LabelKGGeneralWaste.Hide();
+                    this.LabelWeightGeneralWaste.Hide();
                 }
                 else if (products.Selectedmaterial == 2)
                 {
@@ -82,9 +90,9 @@ namespace Userinterface_proftaak
             {
                 this.LabelWeight.Text = text;
                 this.LabelWeightGeneralWaste.Text = this.LabelWeight.Text;
-                this.LabelGeneralWaste.Hide();
-                this.LabelKGGeneralWaste.Hide();
-                this.LabelWeightGeneralWaste.Hide();
+                //this.LabelGeneralWaste.Hide();
+                //this.LabelKGGeneralWaste.Hide();
+                //this.LabelWeightGeneralWaste.Hide();
             }
         }
 

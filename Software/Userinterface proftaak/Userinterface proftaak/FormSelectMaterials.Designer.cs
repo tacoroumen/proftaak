@@ -52,9 +52,9 @@ namespace Userinterface_proftaak
             this.ButtonSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ButtonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSignOut.ForeColor = System.Drawing.Color.Transparent;
-            this.ButtonSignOut.Location = new System.Drawing.Point(1591, 3);
+            this.ButtonSignOut.Location = new System.Drawing.Point(1696, 1);
             this.ButtonSignOut.Name = "ButtonSignOut";
-            this.ButtonSignOut.Size = new System.Drawing.Size(291, 90);
+            this.ButtonSignOut.Size = new System.Drawing.Size(314, 84);
             this.ButtonSignOut.TabIndex = 8;
             this.ButtonSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ButtonSignOut.UseVisualStyleBackColor = false;
@@ -64,11 +64,11 @@ namespace Userinterface_proftaak
             // 
             this.LabelUsername.AutoSize = true;
             this.LabelUsername.BackColor = System.Drawing.Color.White;
-            this.LabelUsername.Font = new System.Drawing.Font("HP Simplified", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelUsername.Font = new System.Drawing.Font("HP Simplified", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.LabelUsername.Location = new System.Drawing.Point(829, 111);
+            this.LabelUsername.Location = new System.Drawing.Point(879, 118);
             this.LabelUsername.Name = "LabelUsername";
-            this.LabelUsername.Size = new System.Drawing.Size(205, 31);
+            this.LabelUsername.Size = new System.Drawing.Size(322, 50);
             this.LabelUsername.TabIndex = 12;
             this.LabelUsername.Text = "Gebruikersnaam";
             // 
@@ -79,9 +79,9 @@ namespace Userinterface_proftaak
             this.ButtonPlastic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ButtonPlastic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ButtonPlastic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonPlastic.Location = new System.Drawing.Point(95, 589);
+            this.ButtonPlastic.Location = new System.Drawing.Point(103, 660);
             this.ButtonPlastic.Name = "ButtonPlastic";
-            this.ButtonPlastic.Size = new System.Drawing.Size(530, 159);
+            this.ButtonPlastic.Size = new System.Drawing.Size(564, 175);
             this.ButtonPlastic.TabIndex = 15;
             this.ButtonPlastic.UseVisualStyleBackColor = false;
             this.ButtonPlastic.Click += new System.EventHandler(this.ButtonPlastic_Click);
@@ -93,9 +93,9 @@ namespace Userinterface_proftaak
             this.ButtonPaper.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ButtonPaper.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ButtonPaper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonPaper.Location = new System.Drawing.Point(686, 589);
+            this.ButtonPaper.Location = new System.Drawing.Point(724, 660);
             this.ButtonPaper.Name = "ButtonPaper";
-            this.ButtonPaper.Size = new System.Drawing.Size(519, 159);
+            this.ButtonPaper.Size = new System.Drawing.Size(566, 175);
             this.ButtonPaper.TabIndex = 16;
             this.ButtonPaper.UseVisualStyleBackColor = false;
             this.ButtonPaper.Click += new System.EventHandler(this.ButtonPaper_Click);
@@ -108,9 +108,9 @@ namespace Userinterface_proftaak
             this.ButtonGeneralWaste.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ButtonGeneralWaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonGeneralWaste.ForeColor = System.Drawing.Color.Transparent;
-            this.ButtonGeneralWaste.Location = new System.Drawing.Point(1267, 590);
+            this.ButtonGeneralWaste.Location = new System.Drawing.Point(1346, 660);
             this.ButtonGeneralWaste.Name = "ButtonGeneralWaste";
-            this.ButtonGeneralWaste.Size = new System.Drawing.Size(524, 158);
+            this.ButtonGeneralWaste.Size = new System.Drawing.Size(565, 175);
             this.ButtonGeneralWaste.TabIndex = 17;
             this.ButtonGeneralWaste.UseVisualStyleBackColor = false;
             this.ButtonGeneralWaste.Click += new System.EventHandler(this.ButtonGeneralWaste_Click);
@@ -121,14 +121,14 @@ namespace Userinterface_proftaak
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.ClientSize = new System.Drawing.Size(2022, 1129);
             this.Controls.Add(this.LabelUsername);
             this.Controls.Add(this.ButtonGeneralWaste);
             this.Controls.Add(this.ButtonPaper);
             this.Controls.Add(this.ButtonSignOut);
             this.Controls.Add(this.ButtonPlastic);
             this.DoubleBuffered = true;
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MaximumSize = new System.Drawing.Size(2048, 1200);
             this.Name = "FormSelectMaterials";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form User";
