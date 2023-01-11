@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Userinterface_proftaak
 {
@@ -17,25 +8,30 @@ namespace Userinterface_proftaak
     {
         Thread secondthread;
         MQTT mqttsettings = new MQTT();
-        User login = new User("", "", "", "");
+        LoginInfo login = new LoginInfo();
         Products products = new Products("", "", "");
+        Database database= new Database();
 
         delegate void SetTextCallback(string text);
 
         public FormResults()
         {
             InitializeComponent();
+            LabelUsername.Text = database.Username;
         }
         private void FormResults_Load(object sender, EventArgs e)
         {
-            secondthread = new Thread(SelectedMaterials);
+            secondthread = new Thread(Materials);
             secondthread.Start();
         }
 
-        private void SelectedMaterials()
+        private void Materials()
         {
-            SelectedMaterial();
+            mqttsettings.Products(products);
+            mqttsettings.Login(login);
+            ChosenMaterial();
         }
+
         private void SetTextMaterial(string text)
         {
             if (this.LabelMaterial.InvokeRequired)
@@ -49,14 +45,17 @@ namespace Userinterface_proftaak
                 {
                     text = "Plastic";
                     this.LabelMaterial.Text = text;
+                    MessageBox.Show("plastic");
                 }
                 else if (products.Selectedmaterial == 1)
                 {
                     text = "Paper";
                     this.LabelMaterial.Text = text;
+                    MessageBox.Show("Paper");
                 }
                 else if (products.Selectedmaterial == 2)
                 {
+                    MessageBox.Show("general waste");
                     this.LabelKG.Hide();
                     this.LabelMaterial.Hide();
                     this.LabelWeight.Hide();
@@ -89,7 +88,7 @@ namespace Userinterface_proftaak
             }
         }
 
-        private void SelectedMaterial()
+        private void ChosenMaterial()
         {
             string text = "";
             SetTextMaterial(text);
@@ -97,7 +96,7 @@ namespace Userinterface_proftaak
 
         private void WeightValue()
         {
-            SetTextWeight(mqttsettings.weightvalue);
+            SetTextWeight(mqttsettings.Weightvalue.ToString());
         }
         private void ButtonSignOut_Click(object sender, EventArgs e)
         {

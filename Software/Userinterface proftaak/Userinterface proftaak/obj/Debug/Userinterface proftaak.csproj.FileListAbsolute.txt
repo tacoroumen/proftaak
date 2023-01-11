@@ -36,7 +36,6 @@ Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterfa
 \\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.AssemblyReference.cache
 \\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.SuggestedBindingRedirects.cache
 \\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
-\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormUser.resources
 \\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.Properties.Resources.resources
 \\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.GenerateResource.cache
 \\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CoreCompileInputs.cache
@@ -158,3 +157,6 @@ Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Valu
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormMeasuring.resources
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormResults.resources
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormSelectMaterials.resources
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormMeasuring.resources
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormResults.resources
+\\Mac\Home\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormSelectMaterials.resources

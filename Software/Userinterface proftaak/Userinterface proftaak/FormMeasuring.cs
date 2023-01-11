@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using uPLibrary.Networking.M2Mqtt;
 
 namespace Userinterface_proftaak
 {
@@ -16,12 +8,14 @@ namespace Userinterface_proftaak
     {
         Thread secondthread;
         MQTT mqttsettings = new MQTT();
-        User login = new User("", "", "", "");
+        LoginInfo login = new LoginInfo();
         Products products = new Products("", "", "");
+        Database database = new Database();
 
         public FormMeasuring()
         {
             InitializeComponent();
+            LabelUsername.Text = database.Username;
         }
 
         private void FormMeasuring_Load(object sender, EventArgs e)
@@ -37,9 +31,9 @@ namespace Userinterface_proftaak
             bool opened = false;
             while (true)
             {
-                if (mqttsettings.weightvalue != null && !opened)
+                if (mqttsettings.Weightvalue > 0 && !opened)
                 {
-                    MessageBox.Show(mqttsettings.weightvalue);
+                    // MessageBox.Show(mqttsettings.weightvalue);
                     FormResults formResults = new FormResults();
                     formResults.ShowDialog();
                     opened = true;

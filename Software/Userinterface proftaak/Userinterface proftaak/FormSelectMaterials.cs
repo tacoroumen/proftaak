@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using uPLibrary.Networking.M2Mqtt;
-using uPLibrary.Networking.M2Mqtt.Messages;
-    
+
 namespace Userinterface_proftaak
 {
     //All values can be declared in a class and then used in the main form
@@ -19,10 +8,12 @@ namespace Userinterface_proftaak
     //Managed to do it with encapsulation and having the values declared separately
     public partial class FormSelectMaterials : Form
     {
-        MQTT mqttsettings  = new MQTT();
-        User login = new User("","","","");
+        MQTT mqttsettings = new MQTT();
         Products products = new Products("","","");
+        LoginInfo login = new LoginInfo();
         Database database = new Database();
+        public string Selectedmaterials;
+        private int Material;
 
         public FormSelectMaterials()
         {
@@ -32,10 +23,11 @@ namespace Userinterface_proftaak
             mqttsettings.Products(products);//define the values from products
             mqttsettings.Login(login);//define login credentials for MQTT server and the database
             database.ConnectionDatabase(); //test connection to database, mostly for test purpose right now
+            LabelUsername.Text = database.Username;
         }
 
         private void ButtonSignOut_Click(object sender, EventArgs e) //End the user session, will be renamed and remodeled later on
-        { 
+        {
             Hide();
             FormLogin FormLogin = new FormLogin();
             FormLogin.ShowDialog();
@@ -43,24 +35,26 @@ namespace Userinterface_proftaak
 
         private void ButtonPlastic_Click(object sender, EventArgs e)
         {
-            products.Selectedmaterial = 0;
-            SelectedMaterial();
+            Material = (int)MaterialType.Plastic; //not functional
+            MessageBox.Show(((int)MaterialType.Plastic).ToString());
+            SelectedMaterial(Material);
         }
 
         private void ButtonPaper_Click(object sender, EventArgs e)
         {
-            products.Selectedmaterial = 1;
-            SelectedMaterial();
+            Material = (int)MaterialType.Paper; //not functional
+            SelectedMaterial(Material);
         }
 
         private void ButtonGeneralWaste_Click(object sender, EventArgs e)
         {
-            products.Selectedmaterial = 2;
-            SelectedMaterial();
+            Material = (int)MaterialType.GeneralWaste; //not functional
+            SelectedMaterial(Material);
         }
 
-        private void SelectedMaterial()
+        private void SelectedMaterial(int Material)
         {
+            new Products(Material); //change Selectedmaterial to Material
             Hide();
             FormMeasuring formMeasuring = new FormMeasuring();
             formMeasuring.ShowDialog();

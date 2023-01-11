@@ -1,4 +1,6 @@
-﻿namespace Userinterface_proftaak
+﻿using System.Runtime.CompilerServices;
+
+namespace Userinterface_proftaak
 {
     partial class FormResults
     {
@@ -247,5 +249,6 @@
         private System.Windows.Forms.Label LabelKGGeneralWaste;
         private System.Windows.Forms.Label LabelWeightGeneralWaste;
         private System.Windows.Forms.Label LabelGeneralWaste;
+
     }
 }
