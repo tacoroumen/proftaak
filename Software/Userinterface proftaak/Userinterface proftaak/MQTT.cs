@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Text;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
@@ -7,9 +8,6 @@ namespace Userinterface_proftaak
 {
     internal class MQTT
     {
-        //create new private values
-        //values separated in classses and objects
-
         private string hostname;
         private string client;
         private string username;
@@ -19,6 +17,9 @@ namespace Userinterface_proftaak
         private string price;
         private string weight;
         private string materials;
+
+        private int selectedMaterials = -1;
+        private string status;
 
         public MqttClient Mqttclient { get; private set; }
         public string Cardnumber { get; private set; }
@@ -48,6 +49,19 @@ namespace Userinterface_proftaak
             this.weight = products.WeightPath;
         }
 
+        public void SelectedMaterial(int selectedmaterial)
+        {
+            this.selectedMaterials = selectedmaterial;
+            Mqttclient.Publish("fontys/material", Encoding.UTF8.GetBytes(this.selectedMaterials.ToString()));
+        }
+
+        public void StatusChecked(string status)
+        {
+            this.status = status;
+            this.Mqttclient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
+            Mqttclient.Publish("fontys/status", Encoding.UTF8.GetBytes(this.status.ToString()));
+        }
+
         public void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
         {
             var message = Encoding.UTF8.GetString(e.Message);
@@ -68,16 +82,3 @@ namespace Userinterface_proftaak
         }
     }
 }
-
-//variable gewicht, zelf veranderen in software
-//time out signed in as 30 sec
-//time out measuring 30 sec
-//summ form 
-
-//datum legen uitlezen 
-//subquery met dat de datum groter moet zijn dan dat 
-//fontys/status   message = Done als klaar en = Busy als uid vergeleken is in database en een valide waarde heeft
-//popup als niet goed is-> card not recognized en status = Denied 
-
-//data encryption
-

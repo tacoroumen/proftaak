@@ -2,7 +2,6 @@
 {
     internal class Products
     {
-
         public string MaterialsPath { get; private set; }
         public string WeightPath { get; private set; }
         public string PricePath { get; private set; }

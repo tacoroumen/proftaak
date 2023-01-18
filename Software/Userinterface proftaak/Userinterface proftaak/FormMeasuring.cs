@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Web;
 using System.Windows.Forms;
 
 namespace Userinterface_proftaak
@@ -11,13 +12,18 @@ namespace Userinterface_proftaak
         LoginInfo login = new LoginInfo();
         Products products = new Products("", "", "");
         Database database = new Database();
-        private int Material;
+        private int material;
+        private string username;
+        private double weight;
+        private string uuid;
 
-        public FormMeasuring(int Material)
+        public FormMeasuring(int Material, string username, string uuid)
         {
             InitializeComponent();
-            LabelUsername.Text = database.Username;
-            this.Material = Material;
+            LabelUsername.Text = username;
+            this.material = Material;
+            this.username= username;
+            this.uuid = uuid;
         }
 
         private void FormMeasuring_Load(object sender, EventArgs e)
@@ -35,8 +41,8 @@ namespace Userinterface_proftaak
             {
                 if (mqttsettings.Weightvalue > 0 && !opened)
                 {
-                    // MessageBox.Show(mqttsettings.weightvalue);
-                    FormResults formResults = new FormResults(Material);
+                    this.weight = mqttsettings.Weightvalue;
+                    FormResults formResults = new FormResults(material, this.username, this.weight, this.uuid);
                     formResults.ShowDialog();
                     opened = true;
                 }

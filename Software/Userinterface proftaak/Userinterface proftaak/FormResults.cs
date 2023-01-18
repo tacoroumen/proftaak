@@ -10,16 +10,21 @@ namespace Userinterface_proftaak
         MQTT mqttsettings = new MQTT();
         LoginInfo login = new LoginInfo();
         Products products = new Products("", "", "");
-        Database database= new Database();
-
+        DBUser dBUser= new DBUser();
+        private double weight;
+        private string uuid;
+        private string username;
+        private string status;
         delegate void SetTextCallback(string text);
 
-        public FormResults(int Material)
+        public FormResults(int Material, string username, double weight, string uuid)
         {
             InitializeComponent();
-            LabelUsername.Text = database.Username;
+            LabelUsername.Text = username;
+            this.username= username;
+            this.weight = weight;
+            this.uuid = uuid;
             products.SetMaterial(Material);
-
         }
         private void FormResults_Load(object sender, EventArgs e)
         {
@@ -36,7 +41,7 @@ namespace Userinterface_proftaak
 
         private void SetTextMaterial(string text)
         {
-            if (this.LabelMaterial.InvokeRequired && this.LabelGeneralWaste.InvokeRequired)
+            if (this.LabelMaterial.InvokeRequired)
             {
                 SetTextCallback d = new SetTextCallback(SetTextMaterial);
                 this.Invoke(d, new object[] { text });
@@ -45,54 +50,19 @@ namespace Userinterface_proftaak
             {
                 if (products.Selectedmaterial == 0)
                 {
-                    text = "Plastic";
+                    text = this.weight + " KG"  + " Paper";
                     this.LabelMaterial.Text = text;
-                    MessageBox.Show("plastic");
-                    this.LabelGeneralWaste.Hide();
-                    this.LabelKGGeneralWaste.Hide();
-                    this.LabelWeightGeneralWaste.Hide();
                 }
                 else if (products.Selectedmaterial == 1)
                 {
-                    text = "Paper";
+                    text = this.weight + " KG" + " Paper";
                     this.LabelMaterial.Text = text;
-                    MessageBox.Show("Paper");
-                    this.LabelGeneralWaste.Hide();
-                    this.LabelKGGeneralWaste.Hide();
-                    this.LabelWeightGeneralWaste.Hide();
                 }
                 else if (products.Selectedmaterial == 2)
                 {
-                    MessageBox.Show("general waste");
-                    this.LabelKG.Hide();
-                    this.LabelMaterial.Hide();
-                    this.LabelWeight.Hide();
-
-                    this.LabelGeneralWaste.Show();
-                    this.LabelKGGeneralWaste.Show();
-                    this.LabelWeightGeneralWaste.Show();
+                    text = this.weight + " KG" + " General Waste";
+                    this.LabelMaterial.Text = text;
                 }
-            }
-            WeightValue();
-        }
-
-        private void SetTextWeight(string text)
-        {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
-            if (this.LabelWeight.InvokeRequired)
-            {
-                SetTextCallback d = new SetTextCallback(SetTextWeight);
-                this.Invoke(d, new object[] { text });
-            }
-            else
-            {
-                this.LabelWeight.Text = text;
-                this.LabelWeightGeneralWaste.Text = this.LabelWeight.Text;
-                //this.LabelGeneralWaste.Hide();
-                //this.LabelKGGeneralWaste.Hide();
-                //this.LabelWeightGeneralWaste.Hide();
             }
         }
 
@@ -102,12 +72,11 @@ namespace Userinterface_proftaak
             SetTextMaterial(text);
         }
 
-        private void WeightValue()
-        {
-            SetTextWeight(mqttsettings.Weightvalue.ToString());
-        }
         private void ButtonSignOut_Click(object sender, EventArgs e)
         {
+            dBUser.DatabaseInsert(this.uuid, this.weight, products.Selectedmaterial);
+            this.status = "Done";
+            mqttsettings.StatusChecked(this.status);
             Hide();
             FormLogin formlogin = new FormLogin();
             formlogin.ShowDialog();
@@ -115,8 +84,11 @@ namespace Userinterface_proftaak
 
         private void ButtonContinue_Click(object sender, EventArgs e)
         {
+            dBUser.DatabaseInsert(this.uuid, this.weight, products.Selectedmaterial);
+            this.status = "Busy";
+            mqttsettings.StatusChecked(this.status);
             Hide();
-            FormSelectMaterials formselectmaterials = new FormSelectMaterials();
+            FormSelectMaterials formselectmaterials = new FormSelectMaterials(this.username, this.uuid);
             formselectmaterials.ShowDialog();
         }
     }

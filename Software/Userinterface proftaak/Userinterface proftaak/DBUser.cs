@@ -15,29 +15,37 @@ namespace Userinterface_proftaak
         MQTT mqttsettings = new MQTT();
         LoginInfo login = new LoginInfo();
         Database database = new Database();
-        Products products = new Products();
         Products productspath = new Products("", "", "");
-        private string uuid;
-        private double weight;
-        private int selectedmaterials;
-
+        private string status;
+        public bool Valid { get; private set; }
+        public string Username { get; private set; }
+        public string uuid { get; private set; }
         public DBUser()
         {
             mqttsettings.Products(productspath);
             mqttsettings.Login(login);
-            this.weight = mqttsettings.Weightvalue;
-            this.selectedmaterials = products.Selectedmaterial;
         }
-        public void CardValidation()
+        public void CardValidation(bool valid)
         {
             this.uuid = mqttsettings.Cardnumber;
-
             if (uuid != null)
             {
-                database.ValidateCard(uuid);
+                database.ValidateCard(uuid, valid);
+                valid = database.Valid;
+                this.Username= database.Username;
+                this.Valid = valid;
+                if(this.Valid == false)
+                {
+                    status = "Denied";
+                    mqttsettings.StatusChecked(status);
+                }
+                else
+                {
+                    this.uuid = uuid;
+                }
             }
         }
-        public void DatabaseInsert()
+        public void DatabaseInsert(string uuid, double weight, int selectedmaterials)
         {
             database.WriteDatabase(uuid, weight, selectedmaterials);
         }

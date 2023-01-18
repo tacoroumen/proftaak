@@ -22,7 +22,7 @@ namespace Userinterface_proftaak
             //close connection every time a query is made. It is not good to use the same connection for multiple query
         }
 
-        public void WriteDatabase(string uuid, double weightvalue, int materialid)
+        public void WriteDatabase(string uuid, double weightvalue, int materialid) //primitive
         {
             ConnectionDatabase();//establish connection
 
@@ -33,7 +33,7 @@ namespace Userinterface_proftaak
             Connection.Close();
         }
 
-        public void ValidateCard(string userid)
+        public bool ValidateCard(string userid, bool valid)
         {
             ConnectionDatabase();//establish connection
             //read from database
@@ -43,7 +43,7 @@ namespace Userinterface_proftaak
             reader.Read();
             if (userid == reader["UUID"].ToString())
             {
-                Valid = true;
+                valid = true;
                 query = $"SELECT Username FROM Users WHERE UUID = '{userid}'";
                 SqlCommand cmd2 = new SqlCommand(query, Connection);
                 SqlDataReader reader2 = cmd2.ExecuteReader();
@@ -52,13 +52,15 @@ namespace Userinterface_proftaak
                 reader.Close();
                 reader2.Close();
                 Connection.Close();
+                Valid = valid;
+                return Valid;
             }
-            else
+            else if(userid != "0")
             {
                 MessageBox.Show("Invalid Card");
-                userid = null; //reset the value to null so it is not stuck in a loop of a million messageboxes
+                return Valid;
             }
+            return Valid;
         }
     }
 }
-//Only use when needed, connection closes after every query
