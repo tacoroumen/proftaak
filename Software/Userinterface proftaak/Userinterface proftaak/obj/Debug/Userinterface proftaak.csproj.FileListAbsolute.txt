@@ -158,3 +158,76 @@ Z:\Documents\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Valu
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormMeasuring.resources
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormResults.resources
 Z:\Documents\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormSelectMaterials.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe.config
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.exe
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Userinterface proftaak.pdb
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Azure.Core.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Azure.Identity.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Buffers.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Data.SqlClient.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Memory.Data.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Memory.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.AccessControl.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.Permissions.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Text.Json.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.ValueTuple.dll
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Azure.Core.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Azure.Identity.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Buffers.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Data.SqlClient.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Memory.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Memory.Data.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.AccessControl.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.Permissions.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Text.Json.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\bin\Debug\System.ValueTuple.xml
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.AssemblyReference.cache
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.SuggestedBindingRedirects.cache
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormLogin.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormMeasuring.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormResults.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.FormSelectMaterials.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface_proftaak.Properties.Resources.resources
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.GenerateResource.cache
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CoreCompileInputs.cache
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.csproj.CopyComplete
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.exe
+C:\Users\tacor\Documents\GitHub\proftaak\Software\Userinterface proftaak\Userinterface proftaak\obj\Debug\Userinterface proftaak.pdb

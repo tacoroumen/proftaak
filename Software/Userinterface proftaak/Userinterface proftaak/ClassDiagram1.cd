@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Userinterface_proftaak.Database">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAEgAAAAAAAAgAAAABAAAAAIAAAAAAA=</HashCode>
+      <FileName>Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.FormLogin">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAABAQCCAAAACAAAAACAAAAAABAAAEAg=</HashCode>
+      <FileName>FormLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.FormMeasuring">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAAAAAICAAAACAQAAACAQAAAABAAAEAA=</HashCode>
+      <FileName>FormMeasuring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.FormResults">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Userinterface_proftaak.FormResults.SetTextCallback" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FormResults.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQQAAAEACAQCBAAgADIAQACISAABiQCAACABAABEAA=</HashCode>
+      <FileName>FormResults.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.FormSelectMaterials">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAiAACABACACAAAACAQAAAABAAACABAAFEAg=</HashCode>
+      <FileName>FormSelectMaterials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.MQTT">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQIAAAAIAABAAAEBAAgAAAAoAAAQBgBABAQ=</HashCode>
+      <FileName>MQTT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.Products">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAQAACAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.Program">
+    <Position X="11.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.User">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAACAAAAAgAAQAAAAAAAAAAAI=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.Properties.Resources">
+    <Position X="4.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAABEAAAAQAAAAAAAAAAAAAEAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Userinterface_proftaak.Properties.Settings">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
