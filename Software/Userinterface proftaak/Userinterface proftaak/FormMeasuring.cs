@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
-using uPLibrary.Networking.M2Mqtt;
 
 namespace Userinterface_proftaak
 {
@@ -16,12 +9,21 @@ namespace Userinterface_proftaak
     {
         Thread secondthread;
         MQTT mqttsettings = new MQTT();
-        User login = new User("", "", "", "");
+        LoginInfo login = new LoginInfo();
         Products products = new Products("", "", "");
+        Database database = new Database();
+        private int material;
+        private string username;
+        private double weight;
+        private string uuid;
 
-        public FormMeasuring()
+        public FormMeasuring(int Material, string username, string uuid)
         {
             InitializeComponent();
+            LabelUsername.Text = username;
+            this.material = Material;
+            this.username= username;
+            this.uuid = uuid;
         }
 
         private void FormMeasuring_Load(object sender, EventArgs e)
@@ -37,10 +39,10 @@ namespace Userinterface_proftaak
             bool opened = false;
             while (true)
             {
-                if (mqttsettings.weightvalue != null && !opened)
+                if (mqttsettings.Weightvalue > 0 && !opened)
                 {
-                    MessageBox.Show(mqttsettings.weightvalue);
-                    FormResults formResults = new FormResults();
+                    this.weight = mqttsettings.Weightvalue;
+                    FormResults formResults = new FormResults(material, this.username, this.weight, this.uuid);
                     formResults.ShowDialog();
                     opened = true;
                 }

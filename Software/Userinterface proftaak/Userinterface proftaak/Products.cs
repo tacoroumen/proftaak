@@ -1,27 +1,28 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Userinterface_proftaak
+﻿namespace Userinterface_proftaak
 {
     internal class Products
     {
-        public string Materials { get; private set; }
-        public string Weight { get; private set; }
-        public string Price { get; private set; }
-        public int Selectedmaterial { get; set; }
+        public string MaterialsPath { get; private set; }
+        public string WeightPath { get; private set; }
+        public string PricePath { get; private set; }
+        public int Selectedmaterial { get; private set; }
+
+        public Products()
+        {
+        }
 
         public Products(string materials, string weight, string price)
         {
             price = "fontys/price";
             materials = "fontys/materials";
             weight = "fontys/weight";
-            this.Price = price;
-            this.Materials = materials;
-            this.Weight = weight;
+            this.PricePath = price;
+            this.MaterialsPath = materials;
+            this.WeightPath = weight;
+        }
+        public void SetMaterial(int materialid)
+        {
+            Selectedmaterial = materialid;
         }
     }
 }

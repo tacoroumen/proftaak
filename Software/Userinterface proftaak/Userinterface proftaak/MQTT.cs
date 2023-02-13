@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Drawing.Text;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -14,18 +8,6 @@ namespace Userinterface_proftaak
 {
     internal class MQTT
     {
-        //create new private values
-        //values separated in classses and objects
-
-        
-        public MqttClient Mqttclient { get; private set; }
-        public string Cardnumber { get; private set; }
-        public string Selectedmaterials { get; private set; }
-        public string weightvalue { get; private set; }
-        public string Pricevalue { get; private set; }
-
-        //have to declare these v alues as using the default values like price and weight will not give output back
-
         private string hostname;
         private string client;
         private string username;
@@ -36,16 +18,23 @@ namespace Userinterface_proftaak
         private string weight;
         private string materials;
 
-        public void Login(User logininfo)
-        {
-            User userid = new User("");//define userid from the scanned card
+        private int selectedMaterials = -1;
+        private string status;
 
-            this.hostname = logininfo.MQTTHostName;
+        public MqttClient Mqttclient { get; private set; }
+        public string Cardnumber { get; private set; }
+        public string Pricevalue { get; private set; }
+        public double Weightvalue { get; private set; }
+
+        public void Login(LoginInfo logininfo)
+        {
+            LoginInfo userid = new LoginInfo("");//define userid from the scanned card
+            this.hostname = logininfo.MQTTHostname;
             this.client = logininfo.MQTTClient;
             this.username = logininfo.MQTTUsername;
             this.password = logininfo.MQTTPassword;
 
-            this.useridcard = userid.UserIDCard;
+            this.useridcard = userid.UserIDPath;
 
             this.Mqttclient = new MqttClient(hostname); //value created and saved in "MqttClient Mqttclient"
             this.Mqttclient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
@@ -55,9 +44,22 @@ namespace Userinterface_proftaak
 
         public void Products(Products products)
         {
-            this.price = products.Price;
-            this.materials = products.Materials;
-            this.weight = products.Weight;
+            this.price = products.PricePath;
+            this.materials = products.MaterialsPath;
+            this.weight = products.WeightPath;
+        }
+
+        public void SelectedMaterial(int selectedmaterial)
+        {
+            this.selectedMaterials = selectedmaterial;
+            Mqttclient.Publish("fontys/material", Encoding.UTF8.GetBytes(this.selectedMaterials.ToString()));
+        }
+
+        public void StatusChecked(string status)
+        {
+            this.status = status;
+            this.Mqttclient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
+            Mqttclient.Publish("fontys/status", Encoding.UTF8.GetBytes(this.status.ToString()));
         }
 
         public void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
@@ -69,31 +71,14 @@ namespace Userinterface_proftaak
                 //MessageBox.Show(message);
                 Cardnumber = message;
             }
-            if (e.Topic == this.materials) //Materials combobox, publish might not be needed due to possible need calculations inside software
-            {
-                Selectedmaterials = message;
-            }
             else if (e.Topic == this.weight) //Measured weight
             {
-                weightvalue = message;
+                Weightvalue = Convert.ToDouble(message);
             }
             else if (e.Topic == this.price) //Calculated price, subject to change due to difference in materials 
-            {                                                //Own calculation inside software might be necessary instead of technology
+            {
                 Pricevalue = message;
             }
-            //listbox and textboxes for testing purposes
         }
     }
 }
-
-//variable gewicht, zelf veranderen in software
-//time out signed in as 30 sec
-//time out measuring 30 sec
-//summ form 
-
-//datum legen uitlezen 
-//subquery met dat de datum groter moet zijn dan dat 
-//fontys/status   message = Done als klaar en = Busy als uid vergeleken is in database en een valide waarde heeft
-//popup als niet goed is-> card not recognized en status = Denied 
-
-//data encryption
