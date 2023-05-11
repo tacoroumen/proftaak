@@ -1,21 +1,23 @@
 #include "Scale.h"
-Scale::Scale(byte pin) {
-  // Use 'this->' to make the difference between the
-  // 'pin' attribute of the class and the 
-  // local variable 'pin' created from the parameter.
-  this->pin = pin;
+Scale::Scale(int _datapin, int _clockpin) {
   init();
 }
 void Scale::init() {
-  pinMode(pin, OUTPUT);
-  // Always try to avoid duplicate code.
-  // Instead of writing digitalWrite(pin, LOW) here,
-  // call the function off() which already does that
-  off();
+  scale.begin(_datapin, _clockpin);
+  scale.tare();
+  LoadCell.begin();
 }
-void Scale::on() {
-  digitalWrite(pin, HIGH);
+void Scale::calibrate() {
+  LoadCell.tare();
+  LoadCell.refreshDataSet();
+  float newCalibrationValue = 459.36;
+  scale.set_scale(newCalibrationValue);
+  pinMode(_datapin, INPUT);
+  pinMode(_clockpin, OUTPUT);
 }
-void Scale::off() {
-  digitalWrite(pin, LOW);
+
+float Scale::measure() {
+  _weight = scale.get_units(10);
+  _weight_kg = _weight / 1000;
+  return _weight_kg;
 }

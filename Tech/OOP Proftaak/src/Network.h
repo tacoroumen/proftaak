@@ -1,17 +1,17 @@
-#ifndef MQTT_H
-#define MQTT_H
+#ifndef NETWORK_H
+#define NETWORK_H
 #include <Arduino.h>
 #include <WiFi.h>
 
 class Network {
   
   private:
-    byte pin;
+    char *ssid;
+    char *password;
     
   public:
-    Network(byte pin);
-    void init();
-    void on();
-    void off();
+    Network(char *ssid, char *password);
+    void setup();
+    void wifi_setup();
 };
 #endif
